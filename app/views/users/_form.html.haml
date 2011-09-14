@@ -1,0 +1,24 @@
+.formbody
+  - semantic_form_for @user, :url => { :action => action } do |f|
+    .field
+      = f.input :username
+      :javascript
+        var username = new LiveValidation('user_username');
+        username.add(Validate.Presence);
+    .field        
+      = f.input :email
+      :javascript
+        var email = new LiveValidation('user_email');
+        email.add(Validate.Email);
+    .field
+      = f.input :password
+      :javascript
+        var password = new LiveValidation('user_password');
+        password.add( Validate.Length, { minimum: 6 } );
+    .field
+      = f.input :password_confirmation
+      :javascript
+        var password_confirmation = new LiveValidation('user_password_confirmation');
+        password_confirmation.add(Validate.Confirmation, { match: 'user_password' } );
+  
+    = f.commit_button button, :disable_with => I18n.t('please_wait')

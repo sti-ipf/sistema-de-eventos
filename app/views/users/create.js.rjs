@@ -1,0 +1,6 @@
+if @user.save
+  page.redirect_to(users_configurations_path)
+else
+  page.replace_html "main_column", :partial => "form", :locals => {:button => I18n.t('create')}
+end
+

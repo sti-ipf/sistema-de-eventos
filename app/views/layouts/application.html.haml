@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title Eieosasco
+    = stylesheet_link_tag :all
+    - js_files = ["jquery.min.js", "jquery_ujs.js", "jquery.meio.mask.min.js", "jquery.tablesorter.min.js"]
+    - js_files.each do |js_file|
+      = javascript_include_tag js_file
+    = javascript_include_inputs
+    = csrf_meta_tag
+  %body
+    .header
+      - if !current_user.nil?
+        .logged
+          Logado como
+          = current_user.name
+          &nbsp
+          = link_to 'Sair', sign_out_path
+    .wrapper
+      .white-box
+        = yield

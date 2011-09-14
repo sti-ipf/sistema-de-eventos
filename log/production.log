@@ -1,0 +1,830 @@
+
+
+Started GET "/" for 127.0.0.1 at Tue Jul 26 22:30:47 -0300 2011
+  Processing by HomeController#index as HTML
+Rendered home/_details.html.haml (66.9ms)
+Rendered home/_table.html.haml (20.8ms)
+Rendered home/index.html.haml within layouts/application (113.9ms)
+Completed 200 OK in 122ms (Views: 121.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/eioosasco.css?1311651267" for 127.0.0.1 at Tue Jul 26 22:30:47 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/eioosasco.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/stylesheets/scaffold.css?1311635401" for 127.0.0.1 at Tue Jul 26 22:30:47 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/jquery.min" for 127.0.0.1 at Tue Jul 26 22:30:47 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.min"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Tue Jul 26 22:30:47 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/application.js?1311430956" for 127.0.0.1 at Tue Jul 26 22:30:47 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/application.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at Tue Jul 26 22:30:47 -0300 2011
+
+ActionController::RoutingError (No route matches "/favicon.ico"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at Tue Jul 26 22:30:47 -0300 2011
+
+ActionController::RoutingError (No route matches "/favicon.ico"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jul 26 22:31:04 -0300 2011
+  Processing by HomeController#index as HTML
+Rendered home/_details.html.haml (0.2ms)
+Rendered home/_table.html.haml (1.4ms)
+Rendered home/index.html.haml within layouts/application (52.1ms)
+Completed 200 OK in 53ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/eioosasco.css?1311651267" for 127.0.0.1 at Tue Jul 26 22:31:04 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/eioosasco.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/jquery.min" for 127.0.0.1 at Tue Jul 26 22:31:04 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.min"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/stylesheets/scaffold.css?1311635401" for 127.0.0.1 at Tue Jul 26 22:31:05 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/application.js?1311430956" for 127.0.0.1 at Tue Jul 26 22:31:05 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/application.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Tue Jul 26 22:31:05 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/javascripts/application.js?1311430956" for 127.0.0.1 at Tue Jul 26 22:31:05 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/application.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jul 26 22:31:06 -0300 2011
+  Processing by HomeController#index as HTML
+Rendered home/_details.html.haml (0.2ms)
+Rendered home/_table.html.haml (1.4ms)
+Rendered home/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 5ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/eioosasco.css?1311651267" for 127.0.0.1 at Tue Jul 26 22:31:06 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/eioosasco.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/stylesheets/scaffold.css?1311635401" for 127.0.0.1 at Tue Jul 26 22:31:06 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Tue Jul 26 22:31:06 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/jquery.min" for 127.0.0.1 at Tue Jul 26 22:31:06 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.min"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/application.js?1311430956" for 127.0.0.1 at Tue Jul 26 22:31:06 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/application.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Tue Jul 26 22:31:06 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/application.js?1311430956" for 127.0.0.1 at Tue Jul 26 22:31:06 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/application.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started POST "/registration_new" for 127.0.0.1 at Tue Jul 26 22:31:07 -0300 2011
+  Processing by RegistrationsController#new as HTML
+  Parameters: {"authenticity_token"=>"XJe+AtwaS9+x3M3qXksIrF1oCYCZgRLwVJ1IoBQPCdg="}
+Rendered registrations/_activities.html.haml (13.2ms)
+Rendered registrations/_public_form.html.haml (69.3ms)
+Rendered registrations/new.html.haml within layouts/application (124.4ms)
+Completed 200 OK in 160ms (Views: 127.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/stylesheets/eioosasco.css?1311651267" for 127.0.0.1 at Tue Jul 26 22:31:08 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/eioosasco.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/stylesheets/scaffold.css?1311635401" for 127.0.0.1 at Tue Jul 26 22:31:08 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Tue Jul 26 22:31:08 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/jquery.min" for 127.0.0.1 at Tue Jul 26 22:31:08 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.min"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/application.js?1311430956" for 127.0.0.1 at Tue Jul 26 22:31:08 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/application.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Tue Jul 26 22:31:08 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/application.js?1311430956" for 127.0.0.1 at Tue Jul 26 22:31:08 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/application.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/registrations" for 127.0.0.1 at Tue Jul 26 22:31:34 -0300 2011
+  Processing by RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Inscrever", "authenticity_token"=>"XJe+AtwaS9+x3M3qXksIrF1oCYCZgRLwVJ1IoBQPCdg=", "utf8"=>"✓", "registration"=>{"name"=>"jij", "address"=>"oko", "city"=>"ko", "dob(1i)"=>"1892", "zip_code"=>"okjokok", "country"=>"koko", "how_known"=>"3", "r.cpf"=>"ij", "dob(2i)"=>"5", "district"=>"oko", "dob(3i)"=>"4", "send_any_work"=>"0", "mobile"=>"okokoko", "disabilities"=>"0", "phone"=>"kok", "student"=>"1", "credential_name"=>"ijijiji", "address_complement"=>"kokok", "address_number"=>"kokoko", "rg"=>"jij", "state"=>"SP", "email"=>"ffc.fabricio@gmail.com"}, "activity_ids"=>{"2"=>"7", "3"=>"20"}}
+Redirected to http://localhost:3000/checkout/1
+Completed 302 Found in 33ms
+
+
+Started GET "/checkout/1" for 127.0.0.1 at Tue Jul 26 22:31:34 -0300 2011
+  Processing by RegistrationsController#checkout as HTML
+  Parameters: {"id"=>"1"}
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/pagseguro-0.1.12/lib/pagseguro/views/_pagseguro_form.html.erb (7.9ms)
+Rendered registrations/checkout.html.haml within layouts/application (39.3ms)
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/stylesheets/eioosasco.css?1311651267" for 127.0.0.1 at Tue Jul 26 22:31:34 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/eioosasco.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/stylesheets/scaffold.css?1311635401" for 127.0.0.1 at Tue Jul 26 22:31:34 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/jquery.min" for 127.0.0.1 at Tue Jul 26 22:31:35 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.min"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Tue Jul 26 22:31:35 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/javascripts/application.js?1311430956" for 127.0.0.1 at Tue Jul 26 22:31:35 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/application.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/registrations" for 127.0.0.1 at Tue Jul 26 22:32:23 -0300 2011
+  Processing by RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Inscrever", "authenticity_token"=>"XJe+AtwaS9+x3M3qXksIrF1oCYCZgRLwVJ1IoBQPCdg=", "utf8"=>"✓", "registration"=>{"name"=>"jij", "address"=>"oko", "city"=>"ko", "dob(1i)"=>"1892", "zip_code"=>"okjokok", "country"=>"koko", "how_known"=>"3", "r.cpf"=>"ij", "dob(2i)"=>"5", "district"=>"oko", "dob(3i)"=>"4", "send_any_work"=>"0", "mobile"=>"okokoko", "disabilities"=>"0", "phone"=>"kok", "student"=>"1", "credential_name"=>"ijijiji", "address_complement"=>"kokok", "address_number"=>"kokoko", "rg"=>"jij", "state"=>"SP", "email"=>"fabricio@f1studio.com.br"}, "activity_ids"=>{"2"=>"7", "3"=>"20"}}
+Redirected to http://localhost:3000/checkout/2
+Completed 302 Found in 16ms
+
+
+Started GET "/checkout/2" for 127.0.0.1 at Tue Jul 26 22:32:23 -0300 2011
+  Processing by RegistrationsController#checkout as HTML
+  Parameters: {"id"=>"2"}
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/pagseguro-0.1.12/lib/pagseguro/views/_pagseguro_form.html.erb (1.3ms)
+Rendered registrations/checkout.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/stylesheets/eioosasco.css?1311651267" for 127.0.0.1 at Tue Jul 26 22:32:23 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/eioosasco.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/stylesheets/scaffold.css?1311635401" for 127.0.0.1 at Tue Jul 26 22:32:23 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/jquery.min" for 127.0.0.1 at Tue Jul 26 22:32:23 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.min"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Tue Jul 26 22:32:23 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/application.js?1311430956" for 127.0.0.1 at Tue Jul 26 22:32:23 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/application.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started POST "/registrations" for 127.0.0.1 at Tue Jul 26 22:33:32 -0300 2011
+  Processing by RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Inscrever", "authenticity_token"=>"XJe+AtwaS9+x3M3qXksIrF1oCYCZgRLwVJ1IoBQPCdg=", "utf8"=>"✓", "registration"=>{"name"=>"jij", "address"=>"oko", "city"=>"ko", "dob(1i)"=>"1892", "zip_code"=>"okjokok", "country"=>"koko", "how_known"=>"3", "r.cpf"=>"ij", "dob(2i)"=>"5", "district"=>"oko", "dob(3i)"=>"4", "send_any_work"=>"0", "mobile"=>"okokoko", "disabilities"=>"0", "phone"=>"kok", "student"=>"1", "credential_name"=>"ijijiji", "address_complement"=>"kokok", "address_number"=>"kokoko", "rg"=>"jij", "state"=>"SP", "email"=>"fabricio@f1studio.com.br"}, "activity_ids"=>{"2"=>"7", "3"=>"20"}}
+Redirected to http://localhost:3000/checkout/3
+Completed 302 Found in 15ms
+
+
+Started GET "/checkout/3" for 127.0.0.1 at Tue Jul 26 22:33:32 -0300 2011
+  Processing by RegistrationsController#checkout as HTML
+  Parameters: {"id"=>"3"}
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/pagseguro-0.1.12/lib/pagseguro/views/_pagseguro_form.html.erb (1.4ms)
+Rendered registrations/checkout.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/stylesheets/eioosasco.css?1311651267" for 127.0.0.1 at Tue Jul 26 22:33:32 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/eioosasco.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/stylesheets/scaffold.css?1311635401" for 127.0.0.1 at Tue Jul 26 22:33:32 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/jquery.min" for 127.0.0.1 at Tue Jul 26 22:33:32 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.min"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Tue Jul 26 22:33:32 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/application.js?1311430956" for 127.0.0.1 at Tue Jul 26 22:33:32 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/application.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started POST "/registrations" for 127.0.0.1 at Tue Jul 26 22:33:50 -0300 2011
+  Processing by RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Inscrever", "authenticity_token"=>"XJe+AtwaS9+x3M3qXksIrF1oCYCZgRLwVJ1IoBQPCdg=", "utf8"=>"✓", "registration"=>{"name"=>"jij", "address"=>"oko", "city"=>"ko", "dob(1i)"=>"1892", "zip_code"=>"okjokok", "country"=>"koko", "how_known"=>"3", "r.cpf"=>"ij", "dob(2i)"=>"5", "district"=>"oko", "dob(3i)"=>"4", "send_any_work"=>"0", "mobile"=>"okokoko", "disabilities"=>"0", "phone"=>"kok", "student"=>"1", "credential_name"=>"ijijiji", "address_complement"=>"kokok", "address_number"=>"kokoko", "rg"=>"jij", "state"=>"SP", "email"=>"fabricio@f1studio.com.br"}, "activity_ids"=>{"2"=>"7", "3"=>"20"}}
+Redirected to http://localhost:3000/checkout/4
+Completed 302 Found in 120ms
+
+
+Started GET "/checkout/4" for 127.0.0.1 at Tue Jul 26 22:33:50 -0300 2011
+  Processing by RegistrationsController#checkout as HTML
+  Parameters: {"id"=>"4"}
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/pagseguro-0.1.12/lib/pagseguro/views/_pagseguro_form.html.erb (2.8ms)
+Rendered registrations/checkout.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 40.1ms)
+
+
+Started GET "/stylesheets/eioosasco.css?1311651267" for 127.0.0.1 at Tue Jul 26 22:33:50 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/eioosasco.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/stylesheets/scaffold.css?1311635401" for 127.0.0.1 at Tue Jul 26 22:33:50 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/jquery.min" for 127.0.0.1 at Tue Jul 26 22:33:50 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.min"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Tue Jul 26 22:33:50 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/application.js?1311430956" for 127.0.0.1 at Tue Jul 26 22:33:50 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/application.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/payment/completed" for 127.0.0.1 at Tue Jul 26 23:14:14 -0300 2011
+  Processing by PaymentsController#completed as HTML
+Rendered payments/completed.html.haml within layouts/application (45.6ms)
+Completed 200 OK in 52ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/jquery.min" for 127.0.0.1 at Tue Jul 26 23:14:14 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.min"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Tue Jul 26 23:14:14 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jul 26 23:26:01 -0300 2011
+  Processing by HomeController#index as HTML
+Rendered home/_details.html.haml (22.4ms)
+Rendered home/_table.html.haml (17.9ms)
+Rendered home/index.html.haml within layouts/application (157.4ms)
+Completed 200 OK in 161ms (Views: 161.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/eioosasco.css?1311651267" for 127.0.0.1 at Tue Jul 26 23:26:01 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/eioosasco.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/jquery.min" for 127.0.0.1 at Tue Jul 26 23:26:01 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.min"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Tue Jul 26 23:26:01 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 00:47:49 -0300 2011
+  Processing by HomeController#index as HTML
+Rendered home/_details.html.haml (0.2ms)
+Rendered home/_table.html.haml (1.7ms)
+Rendered home/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/eioosasco.css?1311651267" for 127.0.0.1 at Wed Jul 27 00:47:49 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/eioosasco.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/stylesheets/scaffold.css?1311635401" for 127.0.0.1 at Wed Jul 27 00:47:49 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/javascripts/jquery.min" for 127.0.0.1 at Wed Jul 27 00:47:49 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.min"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Wed Jul 27 00:47:49 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/registration_new" for 127.0.0.1 at Tue Aug 02 11:24:22 -0300 2011
+  Processing by RegistrationsController#new as HTML
+Rendered registrations/_activities.html.haml (10.0ms)
+Rendered registrations/_public_form.html.haml (114.0ms)
+Rendered registrations/new.html.haml within layouts/application (124.2ms)
+Completed 200 OK in 241ms (Views: 131.5ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/registrations" for 127.0.0.1 at Tue Aug 02 11:25:02 -0300 2011
+  Processing by RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Inscrever", "authenticity_token"=>"tv8uog9rLClAjpEIvKr4fXNkbeQRIgPdk+peyxWeLvo=", "utf8"=>"✓", "registration"=>{"name"=>"oooo", "address"=>"9999999", "city"=>"9999", "dob(1i)"=>"2011", "zip_code"=>"99999-999", "country"=>"Brazil", "how_known"=>"", "cpf"=>"000.000.000-00", "dob(2i)"=>"2", "district"=>"9999", "dob(3i)"=>"1", "mobile"=>"99-9999-9999", "phone"=>"1179751975", "credential_name"=>"ooooooo", "address_complement"=>"9999", "address_number"=>"9999", "rg"=>"00.000.000-0", "state"=>"SP", "email"=>"ffc.fabricio@gmail.com"}, "activity_ids"=>{"2"=>"7", "3"=>"20"}}
+Rendered registrations/_activities.html.haml (4.3ms)
+Rendered registrations/_public_form.html.haml (74.7ms)
+Rendered registrations/new.html.haml within layouts/application (76.5ms)
+Completed 200 OK in 94ms (Views: 76.2ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/registrations" for 127.0.0.1 at Tue Aug 02 11:25:06 -0300 2011
+  Processing by RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Inscrever", "authenticity_token"=>"tv8uog9rLClAjpEIvKr4fXNkbeQRIgPdk+peyxWeLvo=", "utf8"=>"✓", "registration"=>{"name"=>"oooo", "address"=>"9999999", "city"=>"9999", "dob(1i)"=>"2011", "zip_code"=>"99999-999", "country"=>"Brazil", "how_known"=>"1", "cpf"=>"000.000.000-00", "dob(2i)"=>"2", "district"=>"9999", "dob(3i)"=>"1", "mobile"=>"99-9999-9999", "phone"=>"11-7975-1975", "credential_name"=>"ooooooo", "address_complement"=>"9999", "address_number"=>"9999", "rg"=>"00.000.000-0", "state"=>"SP", "email"=>"ffc.fabricio@gmail.com"}, "activity_ids"=>{"2"=>"7", "3"=>"20"}}
+Redirected to http://localhost:3000/checkout/5
+Completed 302 Found in 78ms
+
+
+Started GET "/checkout/5" for 127.0.0.1 at Tue Aug 02 11:25:06 -0300 2011
+  Processing by RegistrationsController#checkout as HTML
+  Parameters: {"id"=>"5"}
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/pagseguro-0.1.12/lib/pagseguro/views/_pagseguro_form.html.erb (1.9ms)
+Rendered shared/_questions.html.haml (2.7ms)
+Rendered registrations/checkout.html.haml within layouts/application (13.5ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 03 16:11:17 -0300 2011
+  Processing by HomeController#index as HTML
+Rendered text template (0.0ms)
+Rendered home/_table.html.haml (15.7ms)
+Rendered home/index.html.haml within layouts/application (37.3ms)
+Completed 200 OK in 197ms (Views: 43.5ms | ActiveRecord: 64.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 24 16:19:22 -0300 2011
+  Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/sign_in
+Completed 302 Found in 2ms
+
+
+Started GET "/sign_in" for 127.0.0.1 at Wed Aug 24 16:19:22 -0300 2011
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/new.html.haml within layouts/application (13.1ms)
+Completed 200 OK in 52ms (Views: 52.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/eioosasco.css?1314031029" for 127.0.0.1 at Wed Aug 24 16:19:22 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/eioosasco.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/stylesheets/style.css?1313955898" for 127.0.0.1 at Wed Aug 24 16:19:23 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/jquery.tablesorter.min.js?1313953847" for 127.0.0.1 at Wed Aug 24 16:19:23 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.tablesorter.min.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/inscricoes/4447/edit" for 127.0.0.1 at Wed Aug 24 16:19:30 -0300 2011
+  Processing by RegistrationsController#edit as HTML
+  Parameters: {"id"=>"4447"}
+Redirected to http://localhost:3000/sign_in
+Completed 302 Found in 1ms
+
+
+Started GET "/sign_in" for 127.0.0.1 at Wed Aug 24 16:19:30 -0300 2011
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/new.html.haml within layouts/application (60.8ms)
+Completed 200 OK in 62ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/eioosasco.css?1314031029" for 127.0.0.1 at Wed Aug 24 16:19:30 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/eioosasco.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/stylesheets/style.css?1313955898" for 127.0.0.1 at Wed Aug 24 16:19:30 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/jquery.tablesorter.min.js?1313953847" for 127.0.0.1 at Wed Aug 24 16:19:30 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.tablesorter.min.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at Wed Aug 24 16:19:36 -0300 2011
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Acessar", "user_session"=>{"username"=>"ipf", "password"=>"[FILTERED]"}, "authenticity_token"=>"NPcYDHA9e4p0Qi4tEWnFqEWT0IOpJ6oKazbr1H6GYAc=", "utf8"=>"✓"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 279ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 24 16:19:36 -0300 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.haml within layouts/application (53.7ms)
+Completed 200 OK in 1346ms (Views: 58.3ms | ActiveRecord: 321.6ms)
+
+
+Started GET "/stylesheets/eioosasco.css?1314031029" for 127.0.0.1 at Wed Aug 24 16:19:37 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/eioosasco.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/jquery.tablesorter.min.js?1313953847" for 127.0.0.1 at Wed Aug 24 16:19:37 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.tablesorter.min.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/stylesheets/style.css?1313955898" for 127.0.0.1 at Wed Aug 24 16:19:37 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/inscricoes/4447/edit" for 127.0.0.1 at Wed Aug 24 16:19:41 -0300 2011
+  Processing by RegistrationsController#edit as HTML
+  Parameters: {"id"=>"4447"}
+Completed 500 Internal Server Error in 54ms
+
+NoMethodError (undefined method `cpf' for nil:NilClass):
+  app/controllers/registrations_controller.rb:165:in `get_activities'
+  app/controllers/registrations_controller.rb:72:in `edit'
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.2ms)
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.7ms)
+
+
+Started GET "/inscricoes/4447/edit" for 127.0.0.1 at Wed Aug 24 16:20:48 -0300 2011
+  Processing by RegistrationsController#edit as HTML
+  Parameters: {"id"=>"4447"}
+Completed 500 Internal Server Error in 81ms
+
+NoMethodError (undefined method `cpf' for nil:NilClass):
+  app/controllers/registrations_controller.rb:168:in `get_activities'
+  app/controllers/registrations_controller.rb:75:in `edit'
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.2ms)
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.7ms)
+
+
+Started GET "/inscricoes/4447/edit" for 127.0.0.1 at Wed Aug 24 16:20:50 -0300 2011
+  Processing by RegistrationsController#edit as HTML
+  Parameters: {"id"=>"4447"}
+Completed 500 Internal Server Error in 55ms
+
+NoMethodError (undefined method `cpf' for nil:NilClass):
+  app/controllers/registrations_controller.rb:168:in `get_activities'
+  app/controllers/registrations_controller.rb:75:in `edit'
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (56.0ms)
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (60.4ms)
+
+
+Started GET "/inscricoes/4447/edit" for 127.0.0.1 at Wed Aug 24 16:21:14 -0300 2011
+  Processing by RegistrationsController#edit as HTML
+  Parameters: {"id"=>"4447"}
+Completed 500 Internal Server Error in 49ms
+
+NoMethodError (undefined method `cpf' for nil:NilClass):
+  app/controllers/registrations_controller.rb:168:in `get_activities'
+  app/controllers/registrations_controller.rb:75:in `edit'
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.8ms)
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.9ms)
+
+
+Started GET "/inscricoes/4447/edit" for 127.0.0.1 at Wed Aug 24 16:21:25 -0300 2011
+  Processing by RegistrationsController#edit as HTML
+  Parameters: {"id"=>"4447"}
+Completed 500 Internal Server Error in 234ms
+
+NoMethodError (undefined method `cpf' for nil:NilClass):
+  app/controllers/registrations_controller.rb:169:in `get_activities'
+  app/controllers/registrations_controller.rb:76:in `edit'
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.3ms)
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.8ms)
+
+
+Started GET "/inscricoes/4447/edit" for 127.0.0.1 at Wed Aug 24 16:27:06 -0300 2011
+  Processing by RegistrationsController#edit as HTML
+  Parameters: {"id"=>"4447"}
+Completed 500 Internal Server Error in 82ms
+
+NoMethodError (undefined method `unmask_cpf' for #<Class:0x10377f160>):
+  app/models/employee.rb:16:in `with_cpf'
+  app/controllers/registrations_controller.rb:74:in `edit'
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.3ms)
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.5ms)
+
+
+Started GET "/inscricoes/4447/edit" for 127.0.0.1 at Wed Aug 24 16:27:52 -0300 2011
+  Processing by RegistrationsController#edit as HTML
+  Parameters: {"id"=>"4447"}
+Rendered registrations/_activities.html.haml (11.5ms)
+Rendered registrations/edit.html.haml within layouts/application (144.0ms)
+Completed 200 OK in 522ms (Views: 186.4ms | ActiveRecord: 130.7ms)
+
+
+Started GET "/stylesheets/eioosasco.css?1314031029" for 127.0.0.1 at Wed Aug 24 16:27:53 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/eioosasco.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/stylesheets/style.css?1313955898" for 127.0.0.1 at Wed Aug 24 16:27:53 -0300 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/jquery.tablesorter.min.js?1313953847" for 127.0.0.1 at Wed Aug 24 16:27:53 -0300 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.tablesorter.min.js"):
+  
+
+Rendered /Users/fabricio/.rvm/gems/ruby-1.8.7-p334@tecnohow/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)

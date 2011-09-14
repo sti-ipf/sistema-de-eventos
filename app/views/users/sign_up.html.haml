@@ -1,0 +1,54 @@
+.white-box-top
+.white-box-container
+  .content
+    #login.login_form
+      %h1 Criar conta
+      %br
+      - semantic_form_for @user, :url => { :action => 'create' } do |f|
+        .field
+          = f.label :name
+          %br
+          = f.text_field :name
+          :javascript
+            var name = new LiveValidation('user_name');
+            name.add(Validate.Presence);
+        .field
+          = f.label :username
+          %br
+          = f.text_field :username
+          :javascript
+            var username = new LiveValidation('user_username');
+            username.add(Validate.Presence);
+        .field
+          = f.label :email
+          %br
+          = f.text_field :email
+          :javascript
+            var email = new LiveValidation('user_email');
+            email.add(Validate.Email);
+        .field
+          = f.label :password
+          %br
+          = f.password_field :password
+          :javascript
+            var password = new LiveValidation('user_password');
+            password.add( Validate.Length, { minimum: 6 } );
+        .field
+          = f.label :password_confirmation
+          %br
+          = f.password_field :password_confirmation
+          :javascript
+            var password_confirmation = new LiveValidation('user_password_confirmation');
+            password_confirmation.add(Validate.Confirmation, { match: 'user_password' } );
+        - if !current_user.nil? && (current_user.admin?)
+          .field
+            %div
+              - f.fields_for :role do |builder|
+                = builder.label :role_type, I18n.t('user.role')
+                %br
+                  = builder.select :role_type, options_for_select(Role::TYPES)
+        = f.commit_button t('create'), :disable_with => I18n.t('please_wait')
+    
+  .clearfix
+
+.white-box-bot

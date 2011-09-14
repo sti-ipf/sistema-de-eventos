@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#registration_disability_desc_div{visibility:hidden;}
+
+.dot_border{
+  background: url('/images/dot-border.png') bottom left repeat-x;
+  clear: both;
+  width: 100%;
+  height: 5px;
+}
+
+abbr{border-style: hidden;}
+
+body {
+  font-family: arial,helvetica,sans-serif;
+  font-size: 14px;
+  background: url("/images/bg-repeat.png") repeat scroll 0 0 transparent;
+}
+.links{float:left;width:100%;}
+.stats_div{float:left;padding: 10px; width:100%;font-weight: bold; font-size: 16px;}
+.stats_div span, .stats_div span a{
+  color: #005C9C;
+  font-size:20px;
+  text-decoration: none;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+  height: 25px;
+  margin: 0 10px 10px 0;
+  width: 200px;
+  background-color: #FBFBFB;
+  color: #7A7A7A;
+  font-size: 12px;
+  padding: 0 5px;
+  border: 1px solid #E3E3E3;
+}
+
+
+h1, h2{color:#699F49;}
+
+.button_div{
+  background-color: #F5F5F5;
+  background-image: -moz-linear-gradient(center top , #F5F5F5, #F1F1F1);
+  background: -webkit-gradient(linear, left top, right top, from(#F5F5F5), to(#F1F1F1));
+  background: #F5F5F5 repeat scroll 0 0 transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #666666;
+  line-height: 26px;
+  text-align: center;
+  border-radius: 2px 2px 2px 2px;
+  float:left;
+  margin-right: 10px;
+}
+
+a {color: #666666; text-decoration: none;}
+a:hover{text-decoration: underline;}
+
+
+.left_panel{
+  float:left;
+  width: 50%;
+}
+
+.right_panel{
+  float:right;
+  width: 49%;
+}
+
+.logged{
+  float: right;
+  padding-right: 5px;
+  padding-top: 7px;
+}
+
+.header {
+    background: url("/images/header-repeat.png") repeat-x scroll 0 0 transparent;
+    height: 28px;
+    width: 100%;
+}
+
+.white-box {
+    margin: 20px 0;
+}
+.white-box-top {
+    background-image: url("/images/white-box-top.png");
+    height: 21px;
+    margin: 0;
+    padding: 0;
+    width: 960px;
+}
+.white-box .white-box-container {
+    background: url("/images/white-box-mid.png") repeat scroll 0 0 transparent;
+}
+.white-box-bot {
+    background-image: url("/images/white-box-bot.png");
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    width: 960px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 960px;
+}
+
+.white-box-container .content{ padding: 20px;}
+
+li{list-style:none;}
+
+label{
+  float: left;
+  width: 175px;
+}
+
+legend label{width:auto !important;padding: 5px;}
+
+input[type="submit"]{
+  background: url("/images/button-background.png") repeat scroll center top #EDEEED;
+  border: 1px solid #C3C4BA;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  height: 28px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+input[type="submit"]:hover{
+  cursor: pointer;
+}
+
+.gray_border{
+  border-bottom: 1px solid #3D618E;
+  clear: both;
+  color: #3D618E;
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-left: -17px;
+  padding-bottom: 4px;
+  text-transform: uppercase;
+  width: 568px;
+}
+
+.gray_border span{padding-left: 20px;}
+
+.second_nivel{padding-left:40px;}
+
+#container{
+  background-color: #BDCADB;
+  padding-top: 0;
+  padding: 15px;
+  margin: 0 auto;
+  width: 960px;
+}
+
+#error, .inline-errors{color: red;}
+
+#error_explanation ul{padding-left: 15px;}
+
+.inline-hints {
+  color: #666666;
+  float: right;
+  font-size: 12px;
+  font-style: italic;
+}
+
+#registration_dob_input label{
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 25px;
+}
+
+#registration_dob_input li{float:left;}
+
+form.formtastic legend {
+  color: #000000;
+  float: left;
+  white-space: normal;
+  width: 100%;
+}
+
+fieldset{padding:5px;}
+
+
+.activities_list {padding-left: 30px; font-style: italic;}
+
+.activities_list li{list-style: circle;}
+
+#details{
+  height: 300px;
+  overflow: auto;
+  padding: 10px;
+  background-color: white;
+}
+
+input.exempting_registration{width:170px !important;}
+
+#registration_buttons input[type="submit"]{float:left;}
+
+.clearfix {clear:both; display:block;}
+
+.public_button{margin-left:30px;}
+
+.pagseguro input[type="submit"] {
+  background: url("/images/pagseguro_button.gif") no-repeat scroll center top transparent;
+  height: 36px;
+  width: 212px;
+  border: 1px solid #C3C4BA;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+p.center{text-align:center;}
+a.phone{cursor: default; text-decoration: none;}
+a.phone:hover{background-color: transparent;color: black;}
+
+#send_work label{width:125px;padding-top: 5px;}
+
+table td {
+  padding: 10px;
+}
+
+table tr {
+  border-bottom: 1px solid #666666; 
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    width: 100%;
+    padding-top: 0;
+}
+table th {
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+}
+
+#show p {padding-top: 10px;}
+
+.white-box-container .registration{width:510px;}

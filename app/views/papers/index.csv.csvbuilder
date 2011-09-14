@@ -1,0 +1,6 @@
+header = ["Participante", "Data de inscrição", "Instituição", "Telefone", "Celular", "Email", "Modo de pagamento", "Titulo do trabalho", "Tipo", "Arquivo", "Atividade", "Cidade"]
+csv << header
+@papers_to_csv.each do |p|
+  csv << p
+end
+

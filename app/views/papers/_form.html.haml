@@ -1,0 +1,28 @@
+= semantic_form_for @paper, :html => { :multipart => true} do |f|
+  -if @paper.errors.any?
+    #error_explanation
+      %ul
+        - @paper.errors.full_messages.each do |msg|
+          %li= msg
+  .gray_border
+    %span
+      = t('registration.basic_info')
+  .field
+    = f.input :title
+  .field
+    = f.input :author
+  .field
+    = f.input :coauthor
+  .field
+    = f.input :resume
+  .field
+  = f.input :key_words
+  .field
+    = f.input :culture_circle, :as => :select, :collection => Paper::CULTURE_CIRCLES, :prompt => t('select')
+  .field
+    = f.input :paper_type, :as => :select, :collection => @paper_types, :prompt => t('select')
+  .field
+    = f.input :artefact, :as => :file, :required => true
+  = f.input :registration_id, :value => @registration.id, :as => :hidden
+  = f.submit t('send')
+

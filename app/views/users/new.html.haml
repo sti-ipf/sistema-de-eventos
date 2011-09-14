@@ -1,0 +1,8 @@
+.white-box-top
+.white-box-container
+  .content
+    %h1 Criar conta
+    %br
+    = render :partial => "form", :locals => {:button => I18n.t('update'), :action => 'create'}
+    .clearfix
+.white-box-bot

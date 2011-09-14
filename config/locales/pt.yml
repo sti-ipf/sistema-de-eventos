@@ -1,0 +1,374 @@
+pt:
+  resources:
+    registrations: 'inscricoes'
+    papers: 'trabalhos'
+    activities: 'paineis'
+  logout: "Sair"
+  edit: "Editar"
+  register: "Inscrever"
+  create: "Cadastrar"
+  delete: "Apagar"
+  remove: "Remover"
+  please_wait: "Aguarde..."
+  exclusion_confirmation: "Você tem certeza que deseja apagar?"
+  welcome: "Seja bem-vindo"
+  logout_message: "Deslogado com sucesso"
+  login_error: "Usuário ou senha inválidos"
+  must_sign_in: "Você deve está logado para acessar essa página"
+  select: "Selecione"
+  search: "Buscar"
+  previous: "Anterior"
+  next: "Próxima"
+  update: "Atualizar"
+  back: "Voltar"
+  save: "Salvar"
+  access_denied: "Acesso negado"
+  y_yes: "Sim"
+  n_no: "Não"
+  show: "Visualizar"
+  destroy: "Apagar"
+  employee_name: "Funcionário"
+  send: "Enviar"
+  registration_new: "Público Geral"
+  welcome_back: ''
+  download: "Baixar"
+  employee:
+    search: "Busca de funcionário"
+    edit: "Alterando funcionário"
+  registration:
+    new_registration: "Inscrição"
+    list: "Inscrições realizadas"
+    basic_info: "Dados básicos"
+    exempting_registration: "Inscrição Funcionário"
+    unit_info: "Dados da instituição"
+    participation_info: "Dados da participação nos paíneis"
+    created: "Inscrição realizada com sucesso."
+    already_created: "Participante já cadastrado"
+    name: "Nome Completo"
+    credential_name: "Nome para Credencial"
+    credential_name_list: "Credencial"
+    rg: "RG"
+    dob: "Data de Nascimento"
+    zip_code: "CEP"
+    address: "Endereço Residencial"
+    address_number: "Número"
+    address_complement: "Complemento"
+    district: "Bairro"
+    city: "Cidade"
+    state: "Estado"
+    country: "País"
+    phone: "Fone Residencial"
+    mobile: "Celular"
+    email: "E-mail"
+    how_known: "Como Conheceu"
+    unit: "Unidade Educacional"
+    unit_zip_code: "CEP da Instituição"
+    unit_address: "Endereço da Instituição"
+    unit_address_number: "Número"
+    unit_address_complement: "Complemento"
+    unit_district: "Bairro"
+    unit_city: "Cidade"
+    unit_state: "Estado"
+    unit_phone: "Fone"
+    unit_fax: "Fax"
+    disabilities: "Possui alguma deficiência?"
+    send_any_work: "Gostaria de enviar um trabalho no tema selecionado"
+    student: "Estudante"
+    status: "Status"
+    mode_of_payment: "Modo de pagamento"
+    invalid_cpf: "CPF inválido, por favor entre em contato com a organização do evento para resolver este problema"
+    created_at: "Data da inscrição"
+    send_any_work_show: "Gostaria de enviar um trabalho"
+    cpf: "CPF"
+    edit: "Alterando inscrição"
+    paid: "Paga?"
+    disability_desc: "Qual deficiência"
+    segment: "Segmento"
+    employee_id: "Matrícula(s)"
+  paper:
+    send_work: "Enviar trabalho"
+    list: "Trabalhos cadastrados"
+    activity: "Atividade"
+    registration: "Participante"
+    title: "Título"
+    paper_type: "Tipo"
+    status: "Status"
+    invalid_content_type: "não permitido. Apenas .odt e .doc são permitidos."
+    must_be_set: "obrigatório"
+    created_at: "Data da inscrição"
+    institution: "Instituição"
+    author: "Autor(a)"
+    coauthor: "Co-autores(as)"
+    resume: "Resumo"
+    key_words: "Palavras-chave"
+    culture_circle: "Círculo de Cultura"
+    unapproved: "Não aprovado"
+    approved: "Aprovado"
+  user:
+    username: "Usuário"
+    email: "Email"
+    menu_name: "Usuários"
+    list: "Usuários"
+    new: "Criar usuário"
+  activity:
+    list: "Atividades"
+    new: "Cadastrar atividade"
+    edit: "Alterando atividade"
+    name: "Nome"
+    description: "Descrição"
+    start_at: "Início"
+    end_at: "Término"
+    total_places: "Lotação"
+  paperclip:
+    errors:
+      attachment:
+        size: "Tamanho do arquivo inválido"
+        content_type: "Conteúdo não suportado"
+        presence: "Não pode ficar em branco"
+  activerecord:
+    models:
+      employee: "Funcionário"
+      user: "Usuário"
+      paper: "Trabalho"
+      user: "Usuário"
+    attributes:
+      paper:
+        theme: "Tema"
+        title: "Título"
+        observation: "Observação"
+        file: "Arquivo"
+        activity_id: "Painel temático"
+        activity: "Painel temático"
+        paper_type: "Tipo"
+        artefact: "Arquivo"
+        artefact_content_type: "Tipo de arquivo"
+        artefact_file_name: "Arquivo"
+        author: "Autor(a)"
+        coauthor: "Co-autores(as)"
+        resume: "Resumo"
+        key_words: "Palavras-chave"
+        culture_circle: "Círculo de Cultura"
+      registration:
+        name: "Nome Completo"
+        credential_name: "Nome para Credencial"
+        rg: "RG"
+        dob: "Data de Nascimento"
+        zip_code: "CEP"
+        address: "Endereço Residencial"
+        address_number: "Número"
+        address_complement: "Complemento"
+        district: "Bairro"
+        city: "Cidade"
+        state: "Estado"
+        country: "País"
+        phone: "Fone Residencial"
+        mobile: "Celular"
+        email: "E-mail"
+        how_known: "Como Conheceu"
+        unit: "Unidade Educacional"
+        unit_zip_code: "CEP da Instituição"
+        unit_address: "Endereço da Instituição"
+        unit_address_number: "Número"
+        unit_address_complement: "Complemento"
+        unit_district: "Bairro"
+        unit_city: "Cidade"
+        unit_state: "Estado"
+        unit_phone: "Fone"
+        unit_fax: "Fax"
+        disabilities: "Possui alguma deficiência?"
+        send_any_work: "Gostaria de enviar um trabalho no tema selecionado"
+        student: "Estudante"
+        status: "Status"
+        mode_of_payment: "Modo de pagamento"
+        disability_desc: "Qual deficiência"
+      user:
+        email: "E-mail"
+        password: "Senha"
+        password_confirmation: "Confirmação da senha"
+        remember_me: "Lembrar login?"
+        username: "Usuário"
+        name: "Nome"
+      participation:
+        activity_id: "Atividade"
+        registration_id: "Número da inscrição do participante"
+      activity:
+        name: "Nome"
+        description: "Descrição"
+        start_at: "Início"
+        end_at: "Término"
+        total_places: "Lotação"
+      employee:
+        employee_name: "Nome"
+        cpf: "CPF"
+        group_type: "Participação"
+        employee: "Nome"
+        work_shift: "Período de trabalho"
+    errors:
+      template:
+        header:
+          one: "Não foi possível gravar %{model}: 1 erro"
+          other: "Não foi possível gravar %{model}: %{count} erros."
+        body: "Por favor, verifique o(s) seguinte(s) campo(s):"
+      messages:
+        attachment_size: "tamanho do arquivo deve estar entre {{min}} e {{max}} bytes"
+        inclusion: "não está incluído na lista"
+        exclusion: "não está disponível"
+        invalid: "não é válido"
+        confirmation: "não está de acordo com a confirmação"
+        accepted: "deve ser aceito"
+        empty: "não pode ficar vazio"
+        blank: "não pode ficar em branco"
+        too_long: "é muito longo (máximo: %{count} caracteres)"
+        too_short: "é muito curto (mínimo: %{count} caracteres)"
+        wrong_length: "não possui o tamanho esperado (%{count} caracteres)"
+        taken: "já está em uso"
+        not_a_number: "não é um número"
+        not_an_integer: "não é um número inteiro"
+        greater_than: "deve ser maior do que %{count}"
+        greater_than_or_equal_to: "deve ser maior ou igual a %{count}"
+        equal_to: "deve ser igual a %{count}"
+        less_than: "deve ser menor do que %{count}"
+        less_than_or_equal_to: "deve ser menor ou igual a %{count}"
+        odd: "deve ser ímpar"
+        even: "deve ser par"
+        record_invalid: "A validação falhou: %{errors}"
+        not_positive: "não é um número positivo"
+        not_negative: "não é um número negativo"
+  # formatos de data e hora
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d de %B"
+      long: "%d de %B de %Y"
+
+    day_names: [Domingo, Segunda, Terça, Quarta, Quinta, Sexta, Sábado]
+    abbr_day_names: [Dom, Seg, Ter, Qua, Qui, Sex, Sáb]
+    month_names: [~, Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro]
+    abbr_month_names: [~, Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez]
+
+  time:
+    formats:
+      default: "%A, %d de %B de %Y, %H:%M h"
+      short: "%d/%m, %H:%M h"
+      long: "%A, %d de %B de %Y, %H:%M h"
+    am: ''
+    pm: ''
+
+  # distancia do tempo em palavras
+  datetime:
+    distance_in_words:
+      half_a_minute: 'meio minuto'
+      less_than_x_seconds:
+        one: 'menos de 1 segundo'
+        other: 'menos de %{count} segundos'
+
+      x_seconds:
+        one: '1 segundo'
+        other: '%{count} segundos'
+
+      less_than_x_minutes:
+        one: 'menos de um minuto'
+        other: 'menos de %{count} minutos'
+
+      x_minutes:
+        one: '1 minuto'
+        other: '%{count} minutos'
+
+      about_x_hours:
+        one: '1 hora'
+        other: '%{count} horas'
+
+      x_days:
+        one: '1 dia'
+        other: '%{count} dias'
+
+      about_x_months:
+        one: '1 mês'
+        other: '%{count} meses'
+
+      x_months:
+        one: '1 mês'
+        other: '%{count} meses'
+
+      about_x_years:
+        one: '1 ano'
+        other: '%{count} anos'
+
+      over_x_years:
+        one: 'mais de 1 ano'
+        other: 'mais de %{count} anos'
+
+      almost_x_years:
+        one: 'quase 1 ano'
+        other: 'quase %{count} anos'
+
+    prompts:
+      year: "Ano"
+      month: "Mês"
+      day: "Dia"
+      hour: "Hora"
+      minute: "Minuto"
+      second: "Segundos"
+
+  # numeros
+  number:
+    format:
+      precision: 3
+      separator: ','
+      delimiter: '.'
+    currency:
+      format:
+        unit: 'R$'
+        precision: 2
+        format: '%u %n'
+        separator: ','
+        delimiter: '.'
+    percentage:
+      format:
+        delimiter: '.'
+    precision:
+      format:
+        delimiter: '.'
+    human:
+      format:
+        precision: 2
+        delimiter: '.'
+        significant: true
+        strip_unsignificant_zeros: true
+      # number_to_human_size()
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: "Byte"
+            other: "Bytes"
+          kb: "KB"
+          mb: "MB"
+          gb: "GB"
+          tb: "TB"
+      # number_to_human()
+      # new in rails 3: please add to other locales
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: ""
+          thousand: "mil"
+          million:
+            one: milhão
+            other: milhões
+          billion:
+            one: bilhão
+            other: bilhões
+          trillion:
+            one: trilhão
+            other: trilhões
+          quadrillion:
+            one: quatrilhão
+            other: quatrilhões
+
+  # Usado no Array.to_sentence
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " e "
+      last_word_connector: " e "

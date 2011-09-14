@@ -1,0 +1,13 @@
+#block-tables.block
+  .content
+    %h2.title= t('user.list')
+    .inner
+      %br
+      .actions
+        = link_to(t('user.new'), new_user_path, :class => 'button')
+      %br
+      %br
+      %br
+      = render :partial => "list", :locals => {:users => @users}
+
+

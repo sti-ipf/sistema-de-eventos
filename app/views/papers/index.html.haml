@@ -1,0 +1,66 @@
+:javascript
+  $(document).ready(function() 
+    { 
+      $("#papers").tablesorter({
+         sortList: [[0,0]],
+         headers: { 
+            5: { 
+                sorter: false 
+            },
+            6: { 
+                sorter: false 
+            },
+            7: { 
+                sorter: false 
+            }
+        } 
+      }); 
+    } 
+  ); 
+.white-box-top
+.white-box-container
+  .content
+    .button_div{:style => 'width: 60px;'}
+      = link_to t('back'), root_path
+
+    .button_div{:style => 'width: 60px; float:right;'}  
+      = link_to 'Exportar', papers_path(:format => :csv)
+    %br
+    %br
+    %h1= t('paper.list')
+    %br
+    - if @papers.count > 0
+      %table{:id => 'papers', :class => 'tablesorter'}
+        %thead
+          %tr
+            %th{:style=> "width:120px; float:left;"}= t('paper.registration')
+            %th{:style=> "width:90px; ;"}= t('paper.created_at')
+            %th{:style=> "width:120px; "}= t('paper.author')
+            %th{:style=> "width:120px; "}= t('paper.title')
+            %th{:style=> "width:90px;"}= t('paper.paper_type')
+            %th
+            %th
+            %th
+            
+        %tbody
+          - @papers.each do |paper|
+            %tr
+              %td
+                - if !paper.registration.nil?
+                  = link_to(paper.registration.name, paper.registration, :target => '_blank')
+              %td
+                = paper.created_at.strftime("%d/%m/%Y") if !paper.created_at.nil?
+              %td= paper.author
+              %td= paper.title
+              %td= paper.paper_type_to_s
+              %td
+                %div{:id => "status_bt_#{paper.id}"}
+                  = generate_status_button(paper)
+              %td= link_to t('download'), "http://inscricao.eieosasco.net#{paper.artefact.url}"
+              %td= link_to t('destroy'), paper_destroy_path(:id => paper.id)
+        
+      %br
+    - else
+      Não há trabalhos enviados ainda.
+
+.white-box-bot

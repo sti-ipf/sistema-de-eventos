@@ -1,0 +1,13 @@
+development: &development
+  developer: true
+  base: "http://localhost:3000"
+  return_to: "/payment/completed"
+  email: ffc.fabricio@gmail.com
+
+test:
+  <<: *development
+
+production:
+  authenticity_token: 8A4A672C9CA24AAABD5BAFA77EF9A217
+  email: ipf@paulofreire.org
+  return_to: "http://www.teste.eieosasco.net/payment/completed"

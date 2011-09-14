@@ -1,0 +1,9 @@
+header = [
+"Nome Completo", "Data da inscrição", "Unidade Educacional", "CPF", "Cidade", "Estado", "País", "Fone Residencial", "Celular", "E-mail"
+]
+
+csv << header
+@registrations_to_csv.each do |r|
+  csv << r
+end
+

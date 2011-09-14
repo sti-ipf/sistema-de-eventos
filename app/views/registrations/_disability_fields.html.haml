@@ -1,0 +1,23 @@
+.field
+  = f.input :disabilities, :as => :radio, :collection => [[t('y_yes'), 1], [t('n_no'), 0]]
+
+:javascript
+  $(document).ready(function() {
+    $("#registration_disabilities_1").change(function() {
+      if ($("#registration_disabilities_1").is(':checked')){
+        jQuery('#registration_disability_desc_div').attr('style','visibility:visible; !important');
+        jQuery('#registration_disability_desc').focus();
+      }
+    });
+
+    $("#registration_disabilities_0").change(function() {
+      if ($("#registration_disabilities_0").is(':checked')){
+        jQuery('#registration_disability_desc_div').attr('style','visibility:hidden; !important');
+      }
+    });
+  });
+
+
+#registration_disability_desc_div
+  .field      
+    = f.input :disability_desc

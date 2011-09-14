@@ -1,0 +1,59 @@
+= "Sr(a) #{@registration.name},"
+%p
+  Sua Inscrição para o "2º Encontro Internacional de Educação de Osasco" foi realizada com sucesso!
+%p
+  Seguem as informações referentes ao seu cadastro:
+%ul
+  %li
+    %b Código da inscrição: 
+    = @registration.id
+  %li
+    %b Nome Completo:
+    = @registration.name
+  %li 
+    %b Nome para Credencial:
+    = @registration.credential_name
+  %li
+    %b CPF:
+    = @registration.cpf
+  %li
+    %b Fone Residencial:
+    = @registration.phone
+  %li
+    %b Celular:
+    = @registration.mobile
+  %li
+    %b E-mail:
+    = @registration.email
+  %li
+    %b Unidade Educacional:
+    = @registration.unit
+  %li
+    %b Possui alguma deficiência?
+    = @registration.disabilities_to_s
+  %li
+    %b Enviará trabalho?
+    = @registration.send_any_work_to_s
+  %li
+    %b Realizou o pagamento?
+    = @registration.paid_to_s
+    
+- if !@registration.paid
+  %p
+    Não acusamos em nosso sistema, o pagamento referente a inscrição do "2º Encontro Internacional de Educação de Osasco". O pagamento pode ser feito através do link abaixo:
+  %p
+    %a{:href=>'http://inscricao.eieosasco.net/checkout/#{@registration.id}'}
+      http://inscricao.eieosasco.net/checkout/#{@registration.id}
+  %p
+    Para realizar o pagamento, basta acessar o endereço e clicar no botão do PagSeguro. Você será direcionado(a) para o ambiente seguro do próprio PagSeguro, onde poderá efetuar o pagamento da sua inscrição.
+- else
+  %p
+    O seu pagamento já foi identificado pelo nosso sistema.
+%p
+  Secretaria da Educação de Osasco
+  %br
+  Central de Atendimento - Osasco 0800-7744644 de segunda a sexta das 9h às 18h. 
+  %br
+  E-mail: eieosasco@paulofreire.org
+%p
+  %i Esse é um e-mail automático, não há necessidade de respondê-lo.

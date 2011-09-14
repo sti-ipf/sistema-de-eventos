@@ -1,0 +1,16 @@
+source 'http://rubygems.org'
+
+gem 'rails', '3.0.9'
+gem 'haml'
+gem 'haml-rails'
+gem 'formtastic'
+gem 'jquery-rails', '>= 1.0.12'
+gem 'mysql2', '< 0.3'
+gem "paperclip", "~> 2.3"
+gem 'authlogic'
+gem 'rcov', '0.9.9'
+gem 'rspec-rails', '2.6.1'
+gem 'i18n_routing'
+gem 'fastercsv'
+gem 'csv_builder'
+gem 'to_worksheet'

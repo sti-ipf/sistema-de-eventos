@@ -1,0 +1,38 @@
+.white-box-top
+.white-box-container
+  .content
+    .links
+      .button_div{:style => 'width: 140px;'}
+        = link_to "Inscrições da Rede", registrations_path
+      .button_div{:style => 'width: 150px;'}
+        = link_to "Trabalhos Enviados", papers_path
+    %br
+    %br
+    %br
+    .left_panel
+      .stats_div
+        Total de inscrições
+        %span
+          = @total_registrations
+    .right_panel
+
+      .stats_div
+        Total de trabalhos enviados
+        %span
+          = @total_papers
+      .stats_div
+        Total de relatos
+        %span
+          = @papers_total
+      .stats_div
+        Total de apresentações
+        %span
+          = @presentation_total
+  
+
+  .clearfix
+
+.white-box-bot
+
+
+

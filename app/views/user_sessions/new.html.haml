@@ -1,0 +1,22 @@
+.white-box-top
+.white-box-container
+  .content
+    %h1 Login
+    %br
+    - semantic_form_for @user_session do |f|
+      .field
+        = f.label :username, "Usuário"
+        %br
+        = f.text_field :username
+        :javascript
+          var username = new LiveValidation('user_session_username');
+          username.add(Validate.Presence);
+      .field
+        = f.label :password, "Senha"
+        %br
+        = f.password_field :password
+        :javascript
+          var password = new LiveValidation('user_session_password');
+          password.add(Validate.Presence);
+      = f.commit_button 'Acessar', :disable_with => I18n.t('please_wait')
+.white-box-bot

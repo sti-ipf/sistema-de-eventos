@@ -1,0 +1,57 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  register: "Register"
+  create: "Register"
+  please_wait: "Wait..."
+  select: "Select"
+  y_yes: "Yes"
+  n_no: "No"
+  employee_name: "Employee"
+  send: "Send"
+  registration_new: "General public"
+  registration:
+    new_registration: "Register"
+    basic_info: "Basic info"
+    participation_info: "Participation info"
+    created: "You are registered. Thank you."
+    already_created: "Participant already registered"
+    name: "Name"
+    credential_name: "Name for badge"
+    zip_code: "Zip code"
+    address: "Home address"
+    address_number: "Number"
+    address_complement: "Complement"
+    district: "Neighborhood"
+    city: "City"
+    state: "State"
+    country: "Country"
+    phone: "Phone"
+    mobile: "Mobile"
+    email: "E-mail"
+    how_known: "How did you know about the event"
+    disabilities: "Do you have any disability"
+    student: "Student"
+  activerecord:
+    models:
+    attributes:
+      employee:
+        employee: "Nome"
+      registration:
+        name: "Name"
+        credential_name: "Name for badge"
+        zip_code: "Zip code"
+        address: "Home address"
+        address_number: "Number"
+        address_complement: "Complement"
+        district: "Neighborhood"
+        city: "City"
+        state: "State"
+        country: "Country"
+        phone: "Phone"
+        mobile: "Mobile"
+        email: "E-mail"
+        how_known: "How did you know about the event"
+        disabilities: "Do you have any disability"
+        student: "Student"

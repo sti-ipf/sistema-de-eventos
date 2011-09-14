@@ -1,0 +1,24 @@
+.white-box-top
+.white-box-container
+  .content
+    %h1 Inscrição efetuada com sucesso!
+    %br
+    %br
+    %p
+      %b Código da inscrição:
+      = @registration.id
+      %br
+      %b Valor da inscrição:
+      Isento
+    %br
+    %p
+      = "Sr(a) #{@registration.name},"
+    %br
+
+    %p
+      Agradecemos e informamos que sua inscrição foi finalizada com sucesso!
+    %br
+    %br
+    .clearfix
+
+.white-box-bot

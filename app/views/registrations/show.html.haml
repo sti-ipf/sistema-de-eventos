@@ -1,0 +1,66 @@
+.white-box-top
+.white-box-container
+  .content
+    .button_div{:style => 'width: 60px;'}
+      = link_to t('back'), registrations_path
+
+    %br
+    %br
+    #show
+      %p
+        %b= "#{t('registration.name')}:"
+        = @registration.name
+      %p
+        %b= "#{t('registration.credential_name')}:"
+        = @registration.credential_name
+      %p
+        %b= "#{t('registration.rg')}:"
+        = @registration.rg
+      %p
+        %b= "#{t('registration.cpf')}:"
+        = @registration.cpf
+      %p
+        %b= "#{t('registration.dob')}:"
+        = @registration.dob.strftime("%d/%m/%Y") if !@registration.dob.nil?
+      %p
+        %b= "#{t('registration.zip_code')}:"
+        = @registration.zip_code
+      %p
+        %b= "#{t('registration.address')}:"
+        = @registration.address
+      %p
+        %b= "#{t('registration.address_number')}:"
+        = @registration.address_number
+      %p
+        %b= "#{t('registration.address_complement')}:"
+        = @registration.address_complement
+      %p
+        %b= "#{t('registration.district')}:"
+        = @registration.district
+      %p
+        %b= "#{t('registration.city')}:"
+        = @registration.city
+      %p
+        %b= "#{t('registration.state')}:"
+        = @registration.state
+      %p
+        %b= "#{t('registration.country')}:"
+        = @registration.country
+      %p
+        %b= "#{t('registration.phone')}:"
+        = @registration.phone
+      %p
+        %b= "#{t('registration.mobile')}:"
+        = @registration.mobile
+      %p
+        %b= "#{t('registration.email')}:"
+        = @registration.email
+      %p
+        %b= "#{t('registration.disabilities')}:"
+        - if @registration.disabilities.nil?
+          Não
+        - elsif @registration.disabilities == true
+          = "Sim (#{@registration.disability_desc})"
+      %p
+        = link_to t('destroy'), registration_destroy_path(:id => @registration.id), :confirm => I18n.t('exclusion_confirmation'), :method => :delete, :title => I18n.t('delete')
+.white-box-bot

@@ -1,0 +1,50 @@
+:javascript
+  $(document).ready(function() 
+    { 
+      $("#registrations").tablesorter({
+         sortList: [[1,0]],
+         headers: { 
+            8: { 
+                sorter: false 
+            }, 
+            9: { 
+                sorter: false 
+            } 
+        } 
+      }); 
+    } 
+  ); 
+      
+%table{:id => 'registrations', :class => 'tablesorter'}
+  %thead
+    %tr
+      %th{:style=> "width:40px;"}= t('registration.id')
+      %th{:style=> "width:60px;"}= t('registration.name')
+      %th{:style=> "width:90px; float:left;"}= t('registration.created_at')
+      %th{:style=> "width:100px;"}= t('registration.unit') 
+      %th{:style=> "width:130px;"}= t('registration.cpf')
+      %th{:style=> "width:180px;"}= t('registration.email')
+      %th{:style=> "width:60px;"}= t('registration.disabilities')
+      %th{:style=> "width:100px;"}= t('registration.employee_id') 
+      %th
+      %th
+  %tbody
+    - registrations.each do |registration|
+      %tr
+        %td{:style=> "width:40px;"}= registration.id
+        %td{:style=> "width:60px; float:left;"}= registration.name
+        - if !registration.created_at.nil?
+          %td= registration.created_at.strftime("%d/%m/%Y") 
+        - else
+          %td
+        
+        %td{:style=> "width:100px; float:left;"}= registration.unit 
+        %td{:style=> "width:130px;"}= registration.cpf
+        %td{:style=> "width:180px;float:left"}= registration.email
+        - if registration.disabilities.blank?
+          %td Não
+        - elsif registration.disabilities == true
+          %td Sim
+        %td= registration.employee_id
+        %td= link_to t('show'), registration
+        %td= link_to t('edit'), edit_registration_path(:id => registration.id)
