@@ -7,7 +7,7 @@ Eieosasco::Application.routes.draw do
 
     resources :papers
     
-    root :to => "home#index"
+    root :to => "registrations#new"
 
     match "registration_destroy/:id" =>'registrations#destroy', :as => 'registration_destroy'
     match "paper_destroy/:id" =>'papers#destroy', :as => 'paper_destroy'
