@@ -1,18 +1,11 @@
-.white-box-top
-.white-box-container
-  .content
-    %p
-      %b= notice
-    %br
+#whitebox_default 
+  %p
+    %b= notice
+  %br
 
-    - form_tag validate_paper_user_path, :method => :put, :id => 'send_work' do
-      = label_tag :cpf, 'Informe o seu CPF:', :style => 'width: 150px;'
-      = text_field_tag :cpf, nil, :class => "exempting_registration"
-      = submit_tag 'Próxima etapa'
-    %br
-  .clearfix
-
-.white-box-bot
-
-
-
+  - form_tag validate_paper_user_path, :method => :put, :id => 'send_work' do
+    = label_tag :cpf, 'Informe o seu CPF:', :style => 'width: 150px;'
+    = text_field_tag :cpf, nil, :class => "exempting_registration"
+    = submit_tag 'Próxima etapa'
+  %br
+.clearfix

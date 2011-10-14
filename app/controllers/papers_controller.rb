@@ -2,6 +2,8 @@ class PapersController < ApplicationController
 
   skip_before_filter :require_user, :only=>[:new, :create, :validate_paper_user]
 
+  layout :set_layout
+
   def index
     @papers = Paper.all(:include => [:registration])
     respond_to do |format|
@@ -85,6 +87,15 @@ protected
 
   def get_new_paper_data
     @paper_types = Paper.get_types_that_didnt_send(@registration.papers.collect(&:paper_type))
+  end
+
+  def set_layout
+    if @current_user.nil?
+      'unlogged'
+    else
+      'application'
+    end
+
   end
 end
 

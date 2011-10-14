@@ -116,7 +116,7 @@ protected
 
   def set_layout
     if @current_user.nil?
-      'registration'
+      'unlogged'
     else
       'application'
     end
