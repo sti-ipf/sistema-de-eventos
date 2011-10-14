@@ -274,14 +274,7 @@ table th {
 
 #paper_form{width: 500px;}
 #paper_form label{width: 25%;}
-#paper_form input{width: 60%;}
+#paper_form input[type="text"], input[type="password"], input[type="email"], input[type="file"]{width: 60%;}
+#paper_form textarea{width: 87%;}
 #paper_form select{width: 62%;}
 
-input.file {
-  position: relative;
-  text-align: right;
-  -moz-opacity:0 ;
-  filter:alpha(opacity: 0);
-  opacity: 0;
-  z-index: 2;
-}
