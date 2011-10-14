@@ -100,6 +100,7 @@ pt:
     author: "Autor(a)"
     coauthor: "Co-autores(as)"
     resume: "Resumo"
+    resume_ast: "Resumo*"
     key_words: "Palavras-chave"
     culture_circle: "Círculo de Cultura"
     unapproved: "Não aprovado"

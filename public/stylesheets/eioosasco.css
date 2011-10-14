@@ -27,7 +27,7 @@ body {
   text-decoration: none;
 }
 
-input[type="text"], input[type="password"], input[type="email"] {
+input[type="text"], input[type="password"], input[type="email"], input[type="file"] {
   height: 25px;
   margin: 0 10px 10px 0;
   width: 200px;
@@ -35,7 +35,7 @@ input[type="text"], input[type="password"], input[type="email"] {
   color: #7A7A7A;
   font-size: 12px;
   padding: 0 5px;
-  border: 1px solid #E3E3E3;
+  border: 1px solid #7A7A7A;
 }
 
 
@@ -246,7 +246,7 @@ table th {
 
 .white-box-container .registration{width:510px;}
 
-#registration_form{
+#custom_form{
   padding: 20px;
   width: 500px;
   background-color: white;
@@ -260,10 +260,13 @@ table th {
 
 #registration_dob_input label{margin:0px 10px;}
 
-#registration_form label{padding: 5px 0px;}
+#custom_form label{padding: 5px 0px;}
 
-#registration_form .field{margin-bottom:15px;}
+#custom_form .field{margin-bottom:15px;}
 
 #registration_disabilities_input fieldset{border:none;}
 
 #registration_disabilities_input legend{ margin-left: -11px;}
+
+#paper_form label{width: 135px;}
+#paper_form select{width: 212px;}
