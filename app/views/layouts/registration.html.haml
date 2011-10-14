@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %title Eieosasco
+    = stylesheet_link_tag :all
+    - js_files = ["jquery.min.js", "jquery_ujs.js", "jquery.meio.mask.min.js"]
+    - js_files.each do |js_file|
+      = javascript_include_tag js_file
+    = javascript_include_inputs
+    = csrf_meta_tag
+  %body
+    = yield

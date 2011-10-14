@@ -245,3 +245,17 @@ table th {
 #show p {padding-top: 10px;}
 
 .white-box-container .registration{width:510px;}
+
+#registration_form{
+  padding: 20px;
+  width: 600px;
+  background-color: white;
+}
+
+#whitebox_default{
+  padding: 20px;
+  width: 600px;
+  background-color: white; 
+}
+
+#registration_form .field{margin-bottom:15px;}

@@ -2,6 +2,8 @@ class RegistrationsController < ApplicationController
   # GET /registrations
   # GET /registrations.xml
   skip_before_filter :require_user, :only=>[:create, :checkout, :completed, :new]
+
+  layout :set_layout
   
   def index
     @registrations = Registration.all(:order => "id ASC")  
@@ -47,7 +49,6 @@ class RegistrationsController < ApplicationController
   # POST /registrations.xml
   def create
     @registration = Registration.new(params[:registration])
-    @registration.mode_of_payment = Registration::PAGSEGURO if @registration.mode_of_payment.nil?
     respond_to do |format|
       if @registration.save
         format.html { redirect_to registration_completed_path(:id => @registration.id) }
@@ -111,7 +112,15 @@ class RegistrationsController < ApplicationController
     end
   end
 
-  
 protected
+
+  def set_layout
+    if @current_user.nil?
+      'registration'
+    else
+      'application'
+    end
+
+  end
   
 end
