@@ -4,9 +4,6 @@
       %ul
         - @paper.errors.full_messages.each do |msg|
           %li= msg
-  .gray_border
-    %span
-      = t('registration.basic_info')
   .field
     = f.input :title
   .field

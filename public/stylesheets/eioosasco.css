@@ -258,4 +258,12 @@ table th {
   background-color: white; 
 }
 
+#registration_dob_input label{margin:0px 10px;}
+
+#registration_form label{padding: 5px 0px;}
+
 #registration_form .field{margin-bottom:15px;}
+
+#registration_disabilities_input fieldset{border:none;}
+
+#registration_disabilities_input legend{ margin-left: -11px;}

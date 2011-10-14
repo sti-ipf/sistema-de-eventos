@@ -180,7 +180,7 @@ pt:
         student: "Estudante"
         status: "Status"
         mode_of_payment: "Modo de pagamento"
-        disability_desc: "Qual deficiência"
+        disability_desc: "Qual deficiência?"
         cpf: "CPF"
       user:
         email: "E-mail"
