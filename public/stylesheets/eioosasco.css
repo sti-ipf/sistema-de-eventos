@@ -38,6 +38,10 @@ input[type="text"], input[type="password"], input[type="email"], input[type="fil
   border: 1px solid #7A7A7A;
 }
 
+textarea{
+  border: 1px solid #7A7A7A;
+}
+
 
 h1, h2{color:#699F49;}
 
@@ -270,3 +274,12 @@ table th {
 
 #paper_form label{width: 135px;}
 #paper_form select{width: 212px;}
+
+input.file {
+  position: relative;
+  text-align: right;
+  -moz-opacity:0 ;
+  filter:alpha(opacity: 0);
+  opacity: 0;
+  z-index: 2;
+}
