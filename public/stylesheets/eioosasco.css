@@ -272,8 +272,10 @@ table th {
 
 #registration_disabilities_input legend{ margin-left: -11px;}
 
-#paper_form label{width: 135px;}
-#paper_form select{width: 212px;}
+#paper_form{width: 500px;}
+#paper_form label{width: 25%;}
+#paper_form input{width: 60%;}
+#paper_form select{width: 62%;}
 
 input.file {
   position: relative;
