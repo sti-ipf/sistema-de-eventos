@@ -51,6 +51,7 @@ class RegistrationsController < ApplicationController
     @registration = Registration.new(params[:registration])
     respond_to do |format|
       if @registration.save
+        @registration.send_notification
         format.html { redirect_to registration_completed_path(:id => @registration.id) }
         format.xml  { render :xml => @registration, :status => :created, :location => @registration }
       else

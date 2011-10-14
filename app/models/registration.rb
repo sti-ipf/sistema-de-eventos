@@ -97,6 +97,11 @@ class Registration < ActiveRecord::Base
     end
     registration
   end
+
+  def send_notification
+    return nil if self.email.blank?
+    Notification.registered(self.id).deliver!
+  end
   
 end
 
