@@ -19,8 +19,6 @@
     .field
       = f.input :culture_circle, :as => :select, :collection => Paper::CULTURE_CIRCLES, :prompt => t('select')
     .field
-      = f.input :paper_type, :as => :select, :collection => @paper_types, :prompt => t('select')
-    .field
       = f.input :artefact, :as => :file, :required => true
     = f.input :registration_id, :value => @registration.id, :as => :hidden
     = f.submit t('send')

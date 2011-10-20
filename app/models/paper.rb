@@ -2,7 +2,7 @@ class Paper < ActiveRecord::Base
   belongs_to :registration
 
   has_attached_file :artefact
-  validates_presence_of :title, :paper_type, :author, :culture_circle
+  validates_presence_of :title, :author, :culture_circle
   validates_attachment_presence :artefact, :message => I18n.t('paper.must_be_set')
   validates_attachment_content_type :artefact,
     :content_type => ['application/msword', 'application/vnd.oasis.opendocument.text'],
