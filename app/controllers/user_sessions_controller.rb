@@ -4,6 +4,10 @@ class UserSessionsController < ApplicationController
   skip_before_filter :require_user, :except => [:destroy]
 
   def new
+    session[:return_to] = request.request_uri
+    puts '-' * 100
+    puts session[:return_to]
+    puts '-' * 100
     @user_session = UserSession.new
   end
 

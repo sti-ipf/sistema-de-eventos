@@ -27,6 +27,14 @@ class Registration < ActiveRecord::Base
     r_activities
   end
 
+  def participation_type_to_s
+    if self.participation_type.to_i == 0
+      'Presencialmente'
+    else
+      'A distância'
+    end
+  end
+
   def disabilities_to_s
     if self.disabilities
       'Sim'
