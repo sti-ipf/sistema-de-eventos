@@ -56,11 +56,15 @@
         %b= "#{t('registration.email')}:"
         = @registration.email
       %p
+        %b= "#{t('registration.participation_type')}:"
+        = @registration.participation_type_to_s
+      %p
         %b= "#{t('registration.disabilities')}:"
-        - if @registration.disabilities.nil?
+        - if @registration.disabilities == true
+          = "Sim (#{@registration.disability_desc})"        
+        - else 
           Não
-        - elsif @registration.disabilities == true
-          = "Sim (#{@registration.disability_desc})"
+          
       %p
         = link_to t('destroy'), registration_destroy_path(:id => @registration.id), :confirm => I18n.t('exclusion_confirmation'), :method => :delete, :title => I18n.t('delete')
 .white-box-bot

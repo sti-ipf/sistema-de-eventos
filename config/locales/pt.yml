@@ -85,6 +85,7 @@ pt:
     disability_desc: "Qual deficiência"
     segment: "Segmento"
     employee_id: "Matrícula(s)"
+    participation_type: "Forma de participação"
   paper:
     send_work: "Enviar trabalho"
     list: "Trabalhos cadastrados"
@@ -183,6 +184,7 @@ pt:
         mode_of_payment: "Modo de pagamento"
         disability_desc: "Qual deficiência?"
         cpf: "CPF"
+        participation_type: "Forma de participação"
       user:
         email: "E-mail"
         password: "Senha"

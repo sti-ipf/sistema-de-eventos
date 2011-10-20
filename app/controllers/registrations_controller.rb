@@ -22,7 +22,7 @@ class RegistrationsController < ApplicationController
   # GET /registrations/1
   # GET /registrations/1.xml
   def show
-    @registration = Registration.find(params[:id], :include => [:activities])
+    @registration = Registration.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
