@@ -115,7 +115,7 @@ a:hover{text-decoration: underline;}
 
 li{list-style:none;}
 
-  label{
+#form label{
   float: left;
   width: 175px;
 }
