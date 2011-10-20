@@ -115,7 +115,7 @@ a:hover{text-decoration: underline;}
 
 li{list-style:none;}
 
-#form label{
+  label{
   float: left;
   width: 175px;
 }
@@ -274,7 +274,8 @@ table th {
 
 #paper_form{width: 500px;}
 #paper_form label{width: 25%;}
-#paper_form input[type="text"], input[type="password"], input[type="email"], input[type="file"]{width: 60%;}
+input[type="password"]
+#paper_form input[type="text"], input[type="email"], input[type="file"]{width: 60%;}
 #paper_form textarea{width: 87%;margin-top: 10px;}
 #paper_form select{width: 62.6%;}
 
