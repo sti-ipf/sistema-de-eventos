@@ -29,7 +29,7 @@ class Registration < ActiveRecord::Base
 
   def participation_type_to_s
     if self.participation_type.to_i == 0
-      'Presencialmente'
+      'Presencial'
     else
       'A distância'
     end
