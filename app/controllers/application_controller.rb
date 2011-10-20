@@ -19,6 +19,7 @@ class ApplicationController < ActionController::Base
   def require_user
     if !current_user
       flash[:notice] = I18n.t('user_session.only_logged')
+      session[:return_to] = request.request_uri
       redirect_to sign_in_path
       return false
     end

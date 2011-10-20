@@ -4,10 +4,6 @@ class UserSessionsController < ApplicationController
   skip_before_filter :require_user, :except => [:destroy]
 
   def new
-    session[:return_to] = request.request_uri
-    puts '-' * 100
-    puts session[:return_to]
-    puts '-' * 100
     @user_session = UserSession.new
   end
 
@@ -15,7 +11,7 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
       flash[:notice] = I18n.t('welcome_back')
-      redirect_to root_path
+      redirect_to session[:return_to]
     else
       render :action => 'new'
     end

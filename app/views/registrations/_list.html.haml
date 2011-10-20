@@ -1,31 +1,45 @@
 :javascript
-  $(document).ready(function() 
-    { 
-      $("#registrations").tablesorter({
-         sortList: [[1,0]],
-         headers: { 
-            8: { 
-                sorter: false 
-            }, 
-            9: { 
-                sorter: false 
-            } 
-        } 
-      }); 
-    } 
-  ); 
-      
-%table{:id => 'registrations', :class => 'tablesorter'}
+  $(document).ready(function(){
+    var oTable = $('.list').dataTable({
+          "iDisplayLength": 100,
+          "bAutoWidth": false,
+          "bJQueryUI": true,
+          "bSort": true,
+          "sDom": '<"H"lTfr>t<"F"ip>',
+          "oTableTools": {
+             "sSwfPath": "DataTables-1.8.1/media/swf/copy_cvs_xls_pdf.swf"
+          },
+          "aoColumnDefs": [ { "bSortable": false, "aTargets": [ 8, 9] }],
+          'oLanguage': {
+            'oPaginate': {
+              'sFirst': 'primeira',
+              'sLast': 'ultima',
+              'sNext': 'próxima',
+              'sPrevious': 'anterior'
+            },
+            'sInfo': 'exibindo de _START_ até _END_ do total de _TOTAL_ registros',
+            'sEmptyTable': 'não há registros para exibir',
+            'sInfoFiltered': '- filtrando de _MAX_ registros',
+            'sInfoPostFix': '',
+            'sLengthMenu': 'exibe _MENU_ registros',
+            'sProcessing': 'processando',
+            'sSearch': 'filtrar',
+            'sZeroRecords': 'não há registros para exibir'
+          }
+        });
+  });
+
+%table{:id => 'registrations', :class => 'list'}
   %thead
     %tr
-      %th{:style=> "width:40px;"}= t('registration.id')
-      %th{:style=> "width:60px;"}= t('registration.name')
-      %th{:style=> "width:90px; float:left;"}= t('registration.created_at')
-      %th{:style=> "width:100px;"}= t('registration.unit') 
-      %th{:style=> "width:130px;"}= t('registration.cpf')
-      %th{:style=> "width:180px;"}= t('registration.email')
-      %th{:style=> "width:60px;"}= t('registration.disabilities')
-      %th{:style=> "width:100px;"}= t('registration.employee_id') 
+      %th= t('registration.id')
+      %th= t('registration.name')
+      %th= t('registration.created_at')
+      %th= t('registration.unit') 
+      %th= t('registration.cpf')
+      %th= t('registration.email')
+      %th= t('registration.disabilities')
+      %th= t('registration.employee_id') 
       %th
       %th
   %tbody
