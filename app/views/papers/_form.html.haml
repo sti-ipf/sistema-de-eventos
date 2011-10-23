@@ -6,6 +6,7 @@
           %ul
             - @paper.errors.full_messages.each do |msg|
               %li= msg
+          %br
       .field
         = f.input :title
       .field
@@ -13,7 +14,9 @@
       .field
         = f.input :coauthor
       .field
-        = f.label :resume, :style => 'width: 400px;'
+        %div{:style => 'width: 400px;'}
+          = f.label :resume
+          %i{:style => 'float:left; padding-top:6px;'} (máximo 1000 caracteres)
         = f.text_area :resume, :cols => '55'
       .field
       = f.input :key_words

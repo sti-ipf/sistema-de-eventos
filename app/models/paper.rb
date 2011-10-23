@@ -7,6 +7,7 @@ class Paper < ActiveRecord::Base
   validates_attachment_content_type :artefact,
     :content_type => ['application/msword', 'application/vnd.oasis.opendocument.text'],
     :message => I18n.t('paper.invalid_content_type')
+  validates_length_of :resume, :maximum => 1000, :allow_blank => true
     
   
   TYPES = [['Relato de Experiência',1],['Apresentação Oral',2]]
