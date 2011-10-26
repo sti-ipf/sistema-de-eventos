@@ -56,7 +56,7 @@
               %td
                 %div{:id => "status_bt_#{paper.id}"}
                   = generate_status_button(paper)
-              %td= link_to t('download'), "http://inscricao.eieosasco.net#{paper.artefact.url}"
+              %td= link_to t('download'), "http://inscricao.paulofreire.org#{paper.artefact.url}"
               %td= link_to t('destroy'), paper_destroy_path(:id => paper.id)
         
       %br
