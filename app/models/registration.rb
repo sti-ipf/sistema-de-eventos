@@ -2,15 +2,15 @@ class Registration < ActiveRecord::Base
 
   has_many :papers
 
-  validates_presence_of :name, :credential_name, :rg, :cpf, :dob, :zip_code, :address, :address_number, :city, :district
+  validates_presence_of :name, :credential_name, :rg, :dob, :zip_code, :address, :address_number, :city, :district
   validates_presence_of :state, :country, :mobile
   validates :email,   
             :presence => true,   
             :uniqueness => true,   
             :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }  
-  validates_uniqueness_of :cpf
+  validates_uniqueness_of :cpf, :allow_blank => true
   validates_format_of :zip_code, :with => %r{\d{5}(-\d{3})?}
-  validates_size_of :cpf, :is => 14
+  validates_size_of :cpf, :is => 14, :allow_blank => true
   validates_size_of :mobile, :is => 12
 
   STATES = ["AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MG", "MS", "MT", "PA",
