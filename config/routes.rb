@@ -7,7 +7,7 @@ Eieosasco::Application.routes.draw do
 
     resources :papers
     
-    root :to => "registrations#new"
+    root :to => "home#index"
 
     match "registration_destroy/:id" =>'registrations#destroy', :as => 'registration_destroy'
     match "paper_destroy/:id" =>'papers#destroy', :as => 'paper_destroy'
@@ -27,6 +27,7 @@ Eieosasco::Application.routes.draw do
 
     match 'export_data/registrations' => 'registrations#export_data', :as => 'export_data_registrations'
     match 'papers/:id/update_status/:status' => 'papers#update_status', :as => 'update_paper_status'
+    match 'dashboard' => 'home#index', :as => 'dashboard'
   end
 
 
