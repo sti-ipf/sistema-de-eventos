@@ -62,6 +62,10 @@
       Presencial
       = f.radio_button(:participation_type, 1)
       A distância
+    .field
+      = f.input :participation, :as => :select, :collection => Registration::PARTICIPATIONS
+    %br
     = render 'disability_fields', :f => f
+
     .actions
       = f.submit button

@@ -13,6 +13,8 @@ class Registration < ActiveRecord::Base
   validates_size_of :cpf, :is => 14, :allow_blank => true
   validates_size_of :mobile, :is => 12
 
+  PARTICIPATIONS = [['Educação Cidadã', 1], ['Educação de Adultos', 2], ['Educação Popular', 3], ['Não participarei no período da manhã', 4]]
+
   STATES = ["AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MG", "MS", "MT", "PA",
             "PB", "PE", "PI", "PR", "RJ", "RN", "RO", "RR", "RS", "SC", "SE", "SP", "TO"]
   

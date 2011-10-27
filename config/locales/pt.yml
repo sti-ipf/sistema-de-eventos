@@ -86,6 +86,7 @@ pt:
     segment: "Segmento"
     employee_id: "Matrícula(s)"
     participation_type: "Forma de participação"
+    participation: "Círculo em que irá participar"
   paper:
     send_work: "Enviar trabalho"
     list: "Trabalhos cadastrados"
@@ -185,6 +186,7 @@ pt:
         disability_desc: "Qual deficiência?"
         cpf: "CPF"
         participation_type: "Forma de participação"
+        participation: "Círculo em que irá participar"
       user:
         email: "E-mail"
         password: "Senha"
