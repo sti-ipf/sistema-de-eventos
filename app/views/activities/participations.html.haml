@@ -1,0 +1,14 @@
+.white-box-top
+.white-box-container
+  .content{:style => 'font-size:11px;'}
+    .button_div{:style => 'width: 60px;'}
+      = link_to t('back'), root_path
+    %br
+    %br
+    %br
+    %h1= "Participantes do paínel <i>#{@activity.name}</i>".html_safe
+    %br
+    = render '/registrations/list', :registrations => @participations
+  .clearfix
+
+.white-box-bot

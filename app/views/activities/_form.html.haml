@@ -1,0 +1,15 @@
+#form
+  = semantic_form_for @activity do |f|
+    -if @activity.errors.any?
+      #error_explanation
+        %ul
+          - @activity.errors.full_messages.each do |msg|
+            %li= msg
+
+    %br
+    .field
+      = f.input :name
+    .field
+      = f.input :lotation
+    .actions
+      = f.submit t('save')

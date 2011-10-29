@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @activity.name
+%p
+  %b Description:
+  = @activity.description
+%p
+  %b Start at:
+  = @activity.start_at
+%p
+  %b End at:
+  = @activity.end_at
+%p
+  %b Total places:
+  = @activity.total_places
+
+= link_to 'Edit', edit_activity_path(@activity)
+\|
+= link_to 'Back', activities_path

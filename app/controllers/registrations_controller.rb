@@ -2,6 +2,7 @@ class RegistrationsController < ApplicationController
   # GET /registrations
   # GET /registrations.xml
   skip_before_filter :require_user, :only=>[:create, :checkout, :completed, :new]
+  before_filter :load_data, :except => [:index, :show, :destroy, :checkout, :completed, :export_data]
 
   layout :set_layout
   
@@ -34,6 +35,7 @@ class RegistrationsController < ApplicationController
   # GET /registrations/new.xml
   def new
     @registration = Registration.new
+    @registration.participations.build
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @registration }
@@ -121,7 +123,17 @@ protected
     else
       'application'
     end
+  end
 
+  def load_data
+    activities = Activity.all
+    @activities = []
+    activities.each do |a|
+      registrations_total = Participation.count(:conditions => "activity_id = #{a.id}")
+      if registrations_total < a.lotation.to_i
+        @activities << [a.name, a.id]
+      end
+    end
   end
   
 end

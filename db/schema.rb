@@ -10,7 +10,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111027113849) do
+ActiveRecord::Schema.define(:version => 20111029210443) do
+
+  create_table "activities", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "lotation"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "papers", :force => true do |t|
     t.string   "title"
@@ -26,6 +34,13 @@ ActiveRecord::Schema.define(:version => 20111027113849) do
     t.integer  "culture_circle"
     t.integer  "registration_id",       :null => false
     t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "participations", :force => true do |t|
+    t.integer  "activity_id"
+    t.integer  "registration_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

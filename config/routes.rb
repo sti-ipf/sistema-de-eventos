@@ -4,7 +4,7 @@ Eieosasco::Application.routes.draw do
     resources :registrations
     resources :users
     resources :user_sessions
-
+    resources :activities
     resources :papers
     
     root :to => "home#index"

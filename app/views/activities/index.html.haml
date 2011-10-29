@@ -1,0 +1,25 @@
+.white-box-top
+.white-box-container
+  .content
+    .button_div{:style => 'width: 60px;'}
+      = link_to t('back'), root_path
+    .button_div{:style => 'width: 150px; float: right;'}
+      = link_to t('activity.new'), new_activity_path
+    %br
+    %br
+    %br
+    %h1= t('activity.list')
+    %br
+    %table
+      %tr
+        %th= t('activity.name')        
+        %th= t('activity.lotation') 
+
+      - @activities.each do |activity|
+        %tr
+          %td= activity.name
+          %td= activity.lotation
+
+
+    %br
+

@@ -1,0 +1,15 @@
+.white-box-top
+.white-box-container
+  .content
+    .button_div{:style => 'width: 60px;'}
+      = link_to t('back'), activities_path
+    %br
+    %br
+    %br
+    %h1= t('activity.new')
+
+    = render 'form'
+  
+  .clearfix
+
+.white-box-bot

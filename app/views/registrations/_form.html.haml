@@ -48,8 +48,7 @@
     .field
       = f.input :state, :as => :select, :collection => Registration::STATES, :selected => "SP"
     .field
-      = f.label :country
-      = f.text_field :country
+      = f.input :country, :as => :select, :collection => Registration::COUNTRIES, :selected => "Brasil"
     .field
       = f.input :phone, :mask => '99-9999-9999', :as => :string
     .field
@@ -62,6 +61,8 @@
       Presencial
       = f.radio_button(:participation_type, 1)
       A distância
+    - f.fields_for :participations do |builder|
+      = render "participation_fields", :f => builder
     .field
       = f.input :participation, :as => :select, :collection => Registration::PARTICIPATIONS
     %br

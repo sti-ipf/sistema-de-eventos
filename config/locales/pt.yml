@@ -32,9 +32,6 @@ pt:
   registration_new: "Público Geral"
   welcome_back: ''
   download: "Baixar"
-  employee:
-    search: "Busca de funcionário"
-    edit: "Alterando funcionário"
   registration:
     new_registration: "Inscrição"
     list: "Inscrições realizadas"
@@ -86,7 +83,7 @@ pt:
     segment: "Segmento"
     employee_id: "Matrícula(s)"
     participation_type: "Forma de participação"
-    participation: "Círculo em que irá participar"
+    participation: "Período de participação"
   paper:
     send_work: "Enviar trabalho"
     list: "Trabalhos cadastrados"
@@ -119,9 +116,7 @@ pt:
     edit: "Alterando atividade"
     name: "Nome"
     description: "Descrição"
-    start_at: "Início"
-    end_at: "Término"
-    total_places: "Lotação"
+    lotation: "Lotação"
   paperclip:
     errors:
       attachment:
@@ -186,7 +181,7 @@ pt:
         disability_desc: "Qual deficiência?"
         cpf: "CPF"
         participation_type: "Forma de participação"
-        participation: "Círculo em que irá participar"
+        participation: "Período de participação"
       user:
         email: "E-mail"
         password: "Senha"
@@ -200,9 +195,7 @@ pt:
       activity:
         name: "Nome"
         description: "Descrição"
-        start_at: "Início"
-        end_at: "Término"
-        total_places: "Lotação"
+        lotation: "Lotação"
       employee:
         employee_name: "Nome"
         cpf: "CPF"
