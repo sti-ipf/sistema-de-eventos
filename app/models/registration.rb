@@ -2,6 +2,7 @@ class Registration < ActiveRecord::Base
 
   has_many :papers
   has_many :participations, :dependent => :destroy
+  has_many :activities, :through => :participations
 
   validates_presence_of :name, :credential_name, :rg, :dob, :zip_code, :address, :address_number, :city, :district
   validates_presence_of :state, :country, :mobile, :participation
@@ -13,6 +14,7 @@ class Registration < ActiveRecord::Base
   validates_format_of :zip_code, :with => %r{\d{5}(-\d{3})?}
   validates_size_of :cpf, :is => 14, :allow_blank => true
   validates_size_of :mobile, :is => 12
+  validate :has_activity
 
   PARTICIPATIONS = [['O dia todo', 1], ['Não participarei no período da manhã', 2]]
 
@@ -22,6 +24,7 @@ class Registration < ActiveRecord::Base
   COUNTRIES = ["Brasil", "Afeganistão", "África do Sul", "Albânia", "Alemanha", "Andorra", "Angola", "Angula", "Antártida", "Antígua e Barbuda", "Antilhas Holandesas", "Arábia Saudita", "Argélia", "Argentina", "Armênia", "Aruba", "Austrália", "Áustria", "Azerbaijão", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Bélgica", "Belize", "Benin", "Bermuda", "Bósnia e Herzegovina", "Botsuana", "Brunei", "Bulgária", "Burkina Fasso", "Burundi", "Butão", "Cabo Verde", "Camarões", "Camboja", "Canadá", "Catar", "Cazaquistão", "Chade", "Chile", "China", "Chipre", "Cidade do Vaticano", "Cingapura", "Colômbia", "Comores", "Congo", "Coréia do Sul", "Costa do Marfim", "Costa Rica", "Croácia", "Cuba", "Djibuti", "Dominica", "Egito", "El Salvador", "Emirados Árabes Unidos", "Equador", "Eritréia", "Eslováquia", "Eslovênia", "Espanha", "Estados Unidos", "Estônia", "Etiópia", "Filipinas", "Finlândia", "França", "Gabão", "Gâmbia", "Gana", "Geórgia", "Gibraltar", "Grécia", "Grenada", "Guadalupe", "Guam", "Guatemala", "Guiana", "Guiana Francesa", "Guiné", "Guiné Equatorial", "Guiné-Bissau", "Haiti", "Holanda", "Honduras", "Hong Kong S. A. R", "Hungria", "Iêmen", "Ilha Bouvet", "Ilha Christmas", "Ilha Norfolk", "Ilhas Cayman", "Ilhas Cocos (Keeling)", "Ilhas Cook", "Ilhas Fiji", "Ilhas Geórgia do Sul e Sandwich do Sul", "Ilhas Heard e Ilhas McDonald", "Ilhas Malvinas (Falkland)", "Ilhas Marianas do Norte", "Ilhas Marshall", "Ilhas Salomão", "Ilhas Turks e Caicos", "Ilhas Virgens Americanas", "Ilhas Virgens Britânicas", "Índia", "Indonésia", "Irã", "Iraque", "Irlanda", "Israel", "Itália", "Iugoslávia", "Jamaica", "Japão", "Kiribati", "Kuwait", "Laos", "Lesoto", "Letônia", "Líbano", "Libéria", "Líbia", "Liechtenstein", "Lituânia", "Luxemburgo", "Macau S.A.R.", "Madagascar", "Malásia", "Malaui", "Maldivas", "Mali", "Malta", "Marrocos", "Martinica", "Maurício", "Mauritânia", "Mayotte", "México", "Micronésia", "Moçambique", "Moldávia", "Mônaco", "Mongólia", "Montserrat", "Myanmar", "Namíbia", "Nauru", "Nepal", "Nicarágua", "Níger", "Ninive", "Nova Caledônia", "Nova Zelândia", "Omã", "Palau", "Panamá", "Papua-Nova Guiné", "Paquistão", "Paraguai", "Peru", "Pitcairn", "Polinésia Francesa", "Polônia", "Porto Rico", "Portugal", "Quênia", "Quirguistão", "Reino Unido", "República Centro-Africana", "Macedônia", "República Dominicana", "República Tcheca", "Reunião", "Romênia", "Ruanda", "Rússia", "Saint-Pierre e Miquelon", "Samoa", "Samoa Americana", "San Marino", "Santa Helena", "Santa Lúcia", "São Tomé e Príncipe", "São Vicente e Granadinas", "Senegal", "Serra Leoa", "Seychelles", "Síria", "Somália", "Sri Lanka", "St. Kitts e Névis", "Suazilândia", "Sudão", "Suíça", "Suriname", "Svalbard", "Tadjiquistão", "Tailândia", "Taiwan", "Tanzânia", "Território Britânico do Oceano Índico", "Territórios Franceses do Sul", "Territórios Insulares dos EUA", "Timor Leste", "Togo", "Tokelau", "Tonga", "Trinidad e Tobago", "Tunísia", "Turcomenistão", "Turquia", "Tuvalu", "Ucrânia", "Uganda", "Uruguai", "Uzbequistão", "Vanuatu", "Venezuela", "Vietnã", "Wallis e Futuna", "Zâmbia", "Zimbábue"]
 
   accepts_nested_attributes_for :participations, :reject_if => lambda { |a| a[:activity_id].blank? }, :allow_destroy => true
+
   
   def activities_without_work_sended
     _activities = self.activities
@@ -32,6 +35,12 @@ class Registration < ActiveRecord::Base
       r_activities << [a.name, a.id] if !activity_ids.include?(a.id)
     end
     r_activities
+  end
+
+  def participation_to_s
+    PARTICIPATIONS.each do |p|
+      return p.first if self.participation.to_i == p.last
+    end
   end
 
   def participation_type_to_s
@@ -116,6 +125,12 @@ class Registration < ActiveRecord::Base
   def send_notification
     return nil if self.email.blank?
     Notification.registered(self.id).deliver!
+  end
+
+private
+
+  def has_activity
+    errors.add(:participation, 'Escolha uma atividade') if self.participations.first.nil?
   end
   
 end
