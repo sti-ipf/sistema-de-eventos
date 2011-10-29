@@ -15,6 +15,7 @@ class Registration < ActiveRecord::Base
   validates_size_of :cpf, :is => 14, :allow_blank => true
   validates_size_of :mobile, :is => 12
   validate :has_activity
+  validate :cpf_if_brazil
 
   PARTICIPATIONS = [['O dia todo', 1], ['Não participarei no período da manhã', 2]]
 
@@ -131,6 +132,12 @@ private
 
   def has_activity
     errors.add(:participation, 'Escolha uma atividade') if self.participations.first.nil?
+  end
+
+  def cpf_if_brazil
+    if self.country == 'Brasil'
+      errors.add(:cpf, 'Informe o seu CPF') if self.cpf.size != 14
+    end
   end
   
 end
