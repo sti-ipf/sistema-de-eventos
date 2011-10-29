@@ -45,7 +45,6 @@ class RegistrationsController < ApplicationController
   # GET /registrations/1/edit
   def edit
     @registration = Registration.find(params[:id])  
-    @registration.participations.build if @registration.participations.count == 0
   end
 
   # POST /registrations
@@ -58,6 +57,7 @@ class RegistrationsController < ApplicationController
         format.html { redirect_to registration_completed_path(:id => @registration.id) }
         format.xml  { render :xml => @registration, :status => :created, :location => @registration }
       else
+        @registration.participations.build
         format.html { render :action => "new" }
         format.xml  { render :xml => @registration.errors, :status => :unprocessable_entity }
       end
