@@ -131,7 +131,7 @@ class Registration < ActiveRecord::Base
 private
 
   def has_activity
-    errors.add(:participation, 'Escolha uma atividade') if self.participations.first.nil?
+    errors.add_to_base('Escolha uma atividade') if self.participations.first.nil?
   end
 
   def cpf_if_brazil

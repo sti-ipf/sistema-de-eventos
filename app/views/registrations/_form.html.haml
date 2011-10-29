@@ -64,7 +64,7 @@
     - f.fields_for :participations do |builder|
       = render "participation_fields", :f => builder
     .field
-      = f.input :participation, :as => :select, :collection => Registration::PARTICIPATIONS
+      = f.input :participation, :as => :select, :collection => Registration::PARTICIPATIONS, :prompt => t('select')
     %br
     = render 'disability_fields', :f => f
 
