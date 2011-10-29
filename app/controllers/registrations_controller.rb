@@ -45,6 +45,7 @@ class RegistrationsController < ApplicationController
   # GET /registrations/1/edit
   def edit
     @registration = Registration.find(params[:id])  
+    @registration.participations.build if @registration.participations.count == 0
   end
 
   # POST /registrations
