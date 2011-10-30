@@ -28,6 +28,9 @@ Eieosasco::Application.routes.draw do
     match 'export_data/registrations' => 'registrations#export_data', :as => 'export_data_registrations'
     match 'papers/:id/update_status/:status' => 'papers#update_status', :as => 'update_paper_status'
     match 'dashboard' => 'home#index', :as => 'dashboard'
+
+    match 'registrations/:id/edit_new_data' => 'registrations#edit_new_data', :as => 'edit_new_data'
+    match 'registrations/:id/update_new_data' => 'registrations#update_new_data', :as => 'update_new_data'
   end
 
 

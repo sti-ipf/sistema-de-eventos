@@ -1,7 +1,7 @@
 class RegistrationsController < ApplicationController
   # GET /registrations
   # GET /registrations.xml
-  skip_before_filter :require_user, :only=>[:create, :checkout, :completed, :new]
+  skip_before_filter :require_user, :only=>[:create, :checkout, :completed, :new, :edit_new_data, :update_new_data, :update]
   before_filter :load_data, :except => [:index, :show, :destroy, :checkout, :completed, :export_data]
 
   layout :set_layout
@@ -67,17 +67,22 @@ class RegistrationsController < ApplicationController
   # PUT /registrations/1
   # PUT /registrations/1.xml
   def update
-    @registration = Registration.find(params[:id])
+    if params[:update_new_data].nil?
+      @registration = Registration.find(params[:id])
 
-    respond_to do |format|
-      if @registration.update_attributes(params[:registration])
-        format.html { redirect_to(@registration, :notice => 'Registration was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @registration.errors, :status => :unprocessable_entity }
+      respond_to do |format|
+        if @registration.update_attributes(params[:registration])
+          format.html { redirect_to(@registration, :notice => 'Registration was successfully updated.') }
+          format.xml  { head :ok }
+        else
+          format.html { render :action => "edit" }
+          format.xml  { render :xml => @registration.errors, :status => :unprocessable_entity }
+        end
       end
+    else
+      update_new_data
     end
+    
   end
   
 
@@ -113,6 +118,26 @@ class RegistrationsController < ApplicationController
         @filename = 'inscricoes.csv'
         @output_encoding = 'UTF-8'
       end  
+    end
+  end
+
+  def edit_new_data
+    @registration = Registration.find(params[:id])  
+    @registration.participations.build if @registration.participations.count == 0
+  end
+
+  def update_new_data
+    @registration = Registration.find(params[:id])
+
+    respond_to do |format|
+      if @registration.update_attributes(params[:registration])
+        format.html { render :action => "update_new_data" }
+        format.xml  { head :ok }
+      else
+        @registration.participations.build if @registration.participations.count == 0
+        format.html { render :action => "edit_new_data" }
+        format.xml  { render :xml => @registration.errors, :status => :unprocessable_entity }
+      end
     end
   end
 
