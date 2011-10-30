@@ -16,3 +16,5 @@ ActionMailer::Base.smtp_settings = {
   :user_name => 'eiesistema@paulofreire.org',
   :password => "IPFeie2011"
 }
+
+ActionMailer::Base.default_url_options[:host] = 'inscricao.paulofreire.org'
