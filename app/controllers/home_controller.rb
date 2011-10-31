@@ -4,6 +4,7 @@ class HomeController < ApplicationController
     @total_registrations = Registration.count
     @total_presencial = Registration.count(:conditions => "participation_type = 0")
     @total_remote = Registration.count(:conditions => "participation_type = 1")
+    @total_papers = Paper.count
     @activities_data = []
     Activity.all.each do |a|
       total_presencial = Participation.find_by_sql("
