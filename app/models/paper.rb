@@ -38,6 +38,13 @@ class Paper < ActiveRecord::Base
     ''
   end
 
+  def culture_circle_to_s
+    CULTURE_CIRCLES.each do |t|
+      return t.first if self.paper_type == t.last
+    end
+    ''
+  end
+
   def self.to_csv_file
     array = []
     all(:include => [:registration], :order => 'registrations.mode_of_payment').each do |p|

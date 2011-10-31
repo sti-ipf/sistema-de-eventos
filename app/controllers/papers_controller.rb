@@ -60,6 +60,25 @@ class PapersController < ApplicationController
     end
   end
 
+  def edit
+    @paper = Paper.find(params[:id])  
+    @registration = @paper.registration
+  end
+
+  def update
+    @paper = Paper.find(params[:id])
+
+    respond_to do |format|
+      if @paper.update_attributes(params[:paper])
+        format.html { redirect_to(papers_path, :notice => 'Paper was successfully updated.') }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @paper.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
   def show
     @paper = Paper.find(params[:id])
   end
