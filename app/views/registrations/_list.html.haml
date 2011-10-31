@@ -1,7 +1,7 @@
 :javascript
   $(document).ready(function(){
     var oTable = $('.list').dataTable({
-          "iDisplayLength": 100,
+          "iDisplayLength": -1,
           "bAutoWidth": false,
           "bJQueryUI": true,
           "bSort": true,
@@ -9,7 +9,7 @@
           "oTableTools": {
              "sSwfPath": "DataTables-1.8.1/media/swf/copy_cvs_xls_pdf.swf"
           },
-          "aoColumnDefs": [ { "bSortable": false, "aTargets": [ 8, 9] }],
+          "aoColumnDefs": [ { "bSortable": false, "aTargets": [ 7, 8, 9] }],
           'oLanguage': {
             'oPaginate': {
               'sFirst': 'primeira',
@@ -32,33 +32,28 @@
 %table{:id => 'registrations', :class => 'list'}
   %thead
     %tr
-      %th= t('registration.id')
       %th= t('registration.name')
-      %th= t('registration.created_at')
-      %th= t('registration.unit') 
-      %th= t('registration.cpf')
-      %th= t('registration.email')
-      %th= t('registration.disabilities')
-      %th= t('registration.employee_id') 
+      %th= t('registration.city')
+      %th= t('registration.country')
+      %th= 'Telefone Celular'
+      %th= t('registration.email') 
+      %th= t('registration.participation_type') 
+      %th= t('registration.participation') 
+      %th
       %th
       %th
   %tbody
     - registrations.each do |registration|
       %tr
-        %td{:style=> "width:40px;"}= registration.id
-        %td{:style=> "width:60px; float:left;"}= registration.name
-        - if !registration.created_at.nil?
-          %td= registration.created_at.strftime("%d/%m/%Y") 
-        - else
-          %td
+        %td{:style => 'width: 50px; float:left;'}= registration.name
+        %td= registration.city
+        %td= registration.country
+        - phone = (registration.phone.blank?)? ' <center>---</center> <br>' : registration.phone
+        %td= "#{phone} #{registration.mobile}".html_safe
+        %td= registration.email
+        %td= registration.participation_type_to_s
+        %td= registration.activities.first.name if !registration.activities.first.nil?
         
-        %td{:style=> "width:100px; float:left;"}= registration.unit 
-        %td{:style=> "width:130px;"}= registration.cpf
-        %td{:style=> "width:180px;float:left"}= registration.email
-        - if registration.disabilities.blank?
-          %td Não
-        - elsif registration.disabilities == true
-          %td Sim
-        %td= registration.employee_id
         %td= link_to t('show'), registration
         %td= link_to t('edit'), edit_registration_path(:id => registration.id)
+        %td= link_to t('destroy'), registration_destroy_path(:id => registration.id), :confirm => I18n.t('exclusion_confirmation'), :method => :delete, :title => I18n.t('delete')
