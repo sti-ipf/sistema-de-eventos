@@ -155,7 +155,11 @@ protected
     activities = Activity.all
     @activities = []
     activities.each do |a|
-      registrations_total = Participation.count(:conditions => "activity_id = #{a.id}")
+      registrations_total = Participation.find_by_sql("
+        SELECT count(*) as total FROM participations p
+        INNER JOIN registrations r ON p.registration_id = r.id
+        WHERE r.participation_type = 0
+        AND p.activity_id = #{a.id}").first.total
       if registrations_total < a.lotation.to_i
         @activities << [a.name, a.id]
       end

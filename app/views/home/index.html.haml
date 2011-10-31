@@ -28,6 +28,23 @@
         Total de trabalhos enviados
         %span
           = @total_papers
+    %br
+    .dot_border
+    %br
+    %h2 Detalhamento da participação dos inscritos
+    %br
+      - @activities_data.each do |a|
+        .stats_div
+          %i= a[:name]
+          %br
+          .second_nivel
+            Total de inscritos presencial
+            %span
+              = a[:total_presencial]
+          .second_nivel
+            Total de inscritos à distância
+            %span
+              = a[:total_remote]
 
   .clearfix
 
