@@ -40,7 +40,7 @@ class Paper < ActiveRecord::Base
 
   def culture_circle_to_s
     CULTURE_CIRCLES.each do |t|
-      return t.first if self.paper_type == t.last
+      return t.first if self.culture_circle == t.last
     end
     ''
   end
