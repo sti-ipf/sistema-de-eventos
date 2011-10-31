@@ -35,7 +35,10 @@
     %br
       - @activities_data.each do |a|
         .stats_div
-          %i= a[:name]
+          - if a[:name] == "Não participarei no período da manhã"
+            %i= "Não participará no período da manhã"
+          - else
+            %i= a[:name]
           %br
           .second_nivel
             Total de inscritos presencial
