@@ -5,7 +5,7 @@ class Registration < ActiveRecord::Base
   has_many :activities, :through => :participations
 
   validates_presence_of :name, :credential_name, :rg, :dob, :zip_code, :address, :address_number, :city, :district
-  validates_presence_of :state, :country, :mobile, :participation
+  validates_presence_of :state, :country, :mobile
   validates :email,   
             :presence => true,   
             :uniqueness => true,   

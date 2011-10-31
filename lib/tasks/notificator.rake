@@ -5,7 +5,9 @@ require File.dirname(__FILE__)+'/../../config/environment'
 namespace :notificator do
 
   task :link_to_update_new_data do
-    Notification.link_to_update_new_data(1).deliver!
+    Registration.all(:conditions => "id NOT IN (select registration_id from participations)").each do |r|
+      Notification.link_to_update_new_data(r.id).deliver!
+    end
   end
 
  

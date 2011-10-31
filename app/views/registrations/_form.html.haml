@@ -62,9 +62,7 @@
       = f.radio_button(:participation_type, 1)
       A distância
     - f.fields_for :participations do |builder|
-      = render "participation_fields", :f => builder
-    .field
-      = f.input :participation, :as => :select, :collection => Registration::PARTICIPATIONS, :prompt => t('select')
+      = render "participation_fields", :f => builder  
     %br
     = render 'disability_fields', :f => f
 
