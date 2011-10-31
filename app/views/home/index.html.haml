@@ -33,21 +33,26 @@
     %br
     %h2 Detalhamento da participação dos inscritos
     %br
-      - @activities_data.each do |a|
-        .stats_div
-          - if a[:name] == "Não participarei no período da manhã"
-            %i= "Não participará no período da manhã"
-          - else
-            %i= a[:name]
-          %br
-          .second_nivel
-            Total de inscritos presencial
-            %span
-              = a[:total_presencial]
-          .second_nivel
-            Total de inscritos à distância
-            %span
-              = a[:total_remote]
+    .stats_div
+      Inscritos que ainda não atualizaram o cadastro
+      %span
+        = @without_participation
+      
+    - @activities_data.each do |a|
+      .stats_div
+        - if a[:name] == "Não participarei no período da manhã"
+          %i= "Não participará no período da manhã"
+        - else
+          %i= a[:name]
+        %br
+        .second_nivel
+          Total de inscritos presencial
+          %span
+            = a[:total_presencial]
+        .second_nivel
+          Total de inscritos à distância
+          %span
+            = a[:total_remote]
 
   .clearfix
 
