@@ -6,6 +6,6 @@
   color: red;
 }
 
-#registration_participation_type_1{
-  margin-left: 15px;
+#registration_participation_type_1, #registration_participation_type_0{
+  margin-left: 25px;
 }
