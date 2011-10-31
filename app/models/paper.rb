@@ -16,6 +16,11 @@ class Paper < ActiveRecord::Base
 
   scope :presentation, where(:paper_type => 1)
   scope :paper, where(:paper_type => 2)
+
+  def send_notification
+    return nil if self.registration.email.blank?
+    Notification.paper_sent(self.id).deliver!
+  end
   
   def self.get_types_that_didnt_send(paper_type_ids)
     if paper_type_ids.blank?

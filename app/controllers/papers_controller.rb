@@ -49,6 +49,7 @@ class PapersController < ApplicationController
 
     respond_to do |format|
       if @paper.save
+        @paper.send_notification
         format.html { redirect_to(new_paper_user_path, :notice => 'Trabalho salvo com sucesso.') }
         format.xml  { render :xml => @paper, :status => :created, :location => @paper }
       else

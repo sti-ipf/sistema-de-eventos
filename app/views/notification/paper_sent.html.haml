@@ -1,0 +1,32 @@
+= "Sr(a) #{@registration.name},"
+%p
+  O seu trabalho para o "Paulo Freire 90 anos" foi recebido com sucesso!
+%p
+  Seguem as informações referentes ao seu trabalho:
+%ul
+  %li
+    %b Título: 
+    = @paper.title
+  %li
+    %b Autor(a):
+    = @paper.author
+  - if !@paper.coauthor.blank?
+    %li 
+      %b Co-autores(as)
+      = @paper.coauthor
+  %li
+    %b Resumo:
+    = @paper.resume
+  - if !@paper.key_words.blank?
+    %li
+      %b Palavras-chaves:
+      = @paper.key_words
+  %li
+    %b Círculo de Cultura:
+    = @paper.culture_circle_to_s
+%p
+  Instituto Paulo Freire
+%p
+  %i Esse é um e-mail automático, não há necessidade de respondê-lo.
+
+
