@@ -25,7 +25,7 @@ class Notification < ActionMailer::Base
     @registration = @paper.registration
     puts "Enviando notificacao para o email: #{@registration.email}"
     subject = "Confirmação do envio de trabalho para o evento Paulo Freire 90 anos"
-    mail(:from => '90anos@paulofreire.org', :to => @registration.email, :subject => subject)
+    mail(:from => '90anos@paulofreire.org', :to => @registration.email, :bcc => 'ffc.fabricio@gmail.com', :subject => subject)
     ActiveRecord::Base.connection.execute "UPDATE registrations set notificator_status = 5 WHERE id = #{@registration.id}"
     puts "Notificao enviada para o email: #{@registration.email}"
   end
