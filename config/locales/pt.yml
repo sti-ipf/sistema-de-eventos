@@ -190,7 +190,7 @@ pt:
         username: "Usuário"
         name: "Nome"
       participation:
-        activity_id: "Atividade"
+        activity_id: "Círculo de Cultura"
         registration_id: "Número da inscrição do participante"
       activity:
         name: "Nome"
