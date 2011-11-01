@@ -153,6 +153,11 @@ protected
   end
 
   def load_data
+    if current_user.nil?
+      increase_limit = 0
+    else
+      increase_limit = 10
+    end
     activities = Activity.all
     @activities = []
     activities.each do |a|
@@ -161,7 +166,7 @@ protected
         INNER JOIN registrations r ON p.registration_id = r.id
         WHERE r.participation_type = 0
         AND p.activity_id = #{a.id}").first.total
-      if registrations_total < a.lotation.to_i
+      if registrations_total < (a.lotation.to_i + increase_limit)
         @activities << [a.name, a.id]
       end
     end
