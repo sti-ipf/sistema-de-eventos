@@ -1,0 +1,17 @@
+.white-box-top
+.white-box-container
+  .content{:style => 'font-size:11px;'}
+    .button_div{:style => 'width: 60px;'}
+      = link_to t('back'), root_path
+    .button_div{:style => 'width: 60px; float:right;'}  
+      = link_to 'Exportar', registrations_path(:format => :csv)
+    %br
+    %br
+    %br
+    = render '/registrations/list', :registrations => @registrations
+    
+    %br
+
+  .clearfix
+
+.white-box-bot
