@@ -56,11 +56,7 @@
     .field
       = f.input :email, :as => :email
     .field
-      Forma de participação:
-      = f.radio_button(:participation_type, 0)
-      Presencial
-      = f.radio_button(:participation_type, 1)
-      A distância
+      = f.input :participation_type, :as => :radio, :collection => [['Presencial', 0], ['A distância', 1]]
     - f.fields_for :participations do |builder|
       = render "participation_fields", :f => builder  
     %br

@@ -1,0 +1,18 @@
+= "Car@ #{@registration.name},"
+%p
+  Desejo que esteja bem.
+%p
+  Infelizmente, no ato de sua inscrição, acabamos não registrando em qual círculo de cultura você deseja participar no período da manhã. Essa informação para nós é muito importante. 
+
+%p
+  Pedimos, portanto, que acesse o link abaixo, selecionando o Círculo de Cultura desejado e a formação de participação. Após isso, clique em "salvar" para validar essa informação.
+%p
+  = link_to 'Atualize os seus dados', edit_new_data_url(:id => @registration.id)
+%p
+  Agradecemos desde já.
+%p
+  Atenciosamente,
+%p
+  Anderson Alencar
+  %br
+  Organização do encontro Paulo Freire 90 Anos - Educação como Ato Político, de Produção e de Conhecimento

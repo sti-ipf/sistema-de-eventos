@@ -10,6 +10,12 @@ namespace :notificator do
     end
   end
 
+
+  task :reminder do
+    Registration.all(:conditions => "id NOT IN (select registration_id from participations)").each do |r|
+      Notification.reminder(r.id).deliver!
+    end
+  end
  
 
 end
