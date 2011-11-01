@@ -36,7 +36,7 @@
     .stats_div
       Inscritos que ainda não atualizaram o cadastro
       %span
-        = @without_participation
+        = link_to @without_participation, without_activity_path
       
     - @activities_data.each do |a|
       .stats_div

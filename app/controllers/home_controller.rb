@@ -21,5 +21,9 @@ class HomeController < ApplicationController
       @activities_data << {:name => a.name, :total_presencial => total_presencial, :total_remote => total_remote}
     end
   end
+
+  def without_activity
+    @registrations = Registration.all(:conditions => "id NOT IN (select registration_id from participations)")
+  end
   
 end
