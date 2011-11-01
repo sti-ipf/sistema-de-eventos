@@ -2,7 +2,6 @@ class RegistrationsController < ApplicationController
   # GET /registrations
   # GET /registrations.xml
   skip_before_filter :require_user, :only=>[:create, :checkout, :completed, :new, :edit_new_data, :update_new_data, :update]
-  before_filter :load_data, :except => [:index, :show, :destroy, :checkout, :completed, :export_data]
 
   layout :set_layout
   
@@ -36,6 +35,7 @@ class RegistrationsController < ApplicationController
   def new
     @registration = Registration.new
     @registration.participations.build
+    load_data(0)
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @registration }
@@ -46,6 +46,7 @@ class RegistrationsController < ApplicationController
   def edit
     @registration = Registration.find(params[:id])  
     @registration.participations.build if @registration.participations.count == 0
+    load_data(10)
   end
 
   # POST /registrations
@@ -59,6 +60,7 @@ class RegistrationsController < ApplicationController
         format.xml  { render :xml => @registration, :status => :created, :location => @registration }
       else
         @registration.participations.build
+        load_data(0)
         format.html { render :action => "new" }
         format.xml  { render :xml => @registration.errors, :status => :unprocessable_entity }
       end
@@ -76,6 +78,8 @@ class RegistrationsController < ApplicationController
           format.html { redirect_to(@registration, :notice => 'Registration was successfully updated.') }
           format.xml  { head :ok }
         else
+          @registration.participations.build if @registration.participations.count == 0
+          load_data(10)
           format.html { render :action => "edit" }
           format.xml  { render :xml => @registration.errors, :status => :unprocessable_entity }
         end
@@ -125,6 +129,7 @@ class RegistrationsController < ApplicationController
   def edit_new_data
     @registration = Registration.find(params[:id])  
     @registration.participations.build if @registration.participations.count == 0
+    load_data(10)
   end
 
   def update_new_data
@@ -136,6 +141,7 @@ class RegistrationsController < ApplicationController
         format.xml  { head :ok }
       else
         @registration.participations.build if @registration.participations.count == 0
+        load_data(10)
         format.html { render :action => "edit_new_data" }
         format.xml  { render :xml => @registration.errors, :status => :unprocessable_entity }
       end
@@ -152,12 +158,7 @@ protected
     end
   end
 
-  def load_data
-    if current_user.nil?
-      increase_limit = 0
-    else
-      increase_limit = 10
-    end
+  def load_data(increase_limit)
     activities = Activity.all
     @activities = []
     activities.each do |a|
