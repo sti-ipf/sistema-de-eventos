@@ -34,7 +34,7 @@ class Notification < ActionMailer::Base
     @registration = Registration.find(registration_id)
     puts "Enviando notificacao para o email: #{@registration.email}"
     subject = "LEMBRETE: Retificação no cadastro de participação"
-    mail(:from => '90anos@paulofreire.org', :to => 'ffc.fabricio@gmail.com', :bcc => 'ffc.fabricio@gmail.com', :subject => subject)
+    mail(:from => '90anos@paulofreire.org', :to => @registration.email, :bcc => 'ffc.fabricio@gmail.com', :subject => subject)
     ActiveRecord::Base.connection.execute "UPDATE registrations set notificator_status = 10 WHERE id = #{@registration.id}"
   end
 
