@@ -17,6 +17,11 @@ namespace :notificator do
     end
   end
  
+  task :paper_reminder do
+    Registration.all.each do |r|
+      Notification.paper_reminder(r.id).deliver!
+    end
+  end
 
 end
 
