@@ -5,9 +5,11 @@ class Paper < ActiveRecord::Base
   validates_presence_of :title, :author, :culture_circle
   validates_attachment_presence :artefact, :message => I18n.t('paper.must_be_set')
   validates_attachment_content_type :artefact,
-    :content_type => ['application/msword', 'application/vnd.oasis.opendocument.text'],
+    :content_type => ['application/msword', 'application/vnd.oasis.opendocument.text', 
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document'],
     :message => I18n.t('paper.invalid_content_type')
-  validates_length_of :resume, :maximum => 1000, :allow_blank => true
+  validate :resume_max_words
+  validate :resume_minimum_words
     
   
   TYPES = [['Relato de Experiência',1],['Apresentação Oral',2]]
@@ -72,6 +74,22 @@ class Paper < ActiveRecord::Base
       array << new_array
     end
     array
+  end
+
+private 
+  
+  def resume_max_words
+    if !self.resume.blank?
+      errors.add(:resume, 'limite máximo de 500 palavras') if self.resume.split(' ').size > 500
+    end
+  end
+
+  def resume_minimum_words
+    if !self.resume.blank?
+      errors.add(:resume, 'deve ter no mínimo 150 palavras') if self.resume.split(' ').size < 150
+    else
+      errors.add(:resume, 'deve ter no mínimo 150 palavras') 
+    end
   end
 
 
