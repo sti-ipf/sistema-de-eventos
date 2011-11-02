@@ -80,7 +80,7 @@ private
   
   def resume_max_words
     if !self.resume.blank?
-      errors.add(:resume, 'deve ter no máximo de 500 palavras') if self.resume.split(' ').size > 500
+      errors.add(:resume, 'deve ter no máximo 500 palavras') if self.resume.split(' ').size > 500
     end
   end
 
