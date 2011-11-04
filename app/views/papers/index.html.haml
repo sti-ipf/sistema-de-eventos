@@ -9,7 +9,7 @@
           "oTableTools": {
              "sSwfPath": "DataTables-1.8.1/media/swf/copy_cvs_xls_pdf.swf"
           },
-          "aoColumnDefs": [ { "bSortable": false, "aTargets": [ 4, 5, 6] }],
+          "aoColumnDefs": [ { "bSortable": false, "aTargets": [ 5, 6, 7] }],
           'oLanguage': {
             'oPaginate': {
               'sFirst': 'primeira',
@@ -57,9 +57,9 @@
         %tbody
           - @papers.each do |paper|
             %tr
-              %td= paper.title
-              %td= paper.author
-              %td= paper.coauthor
+              %td{:style => 'width: 160px;'}= paper.title
+              %td{:style => 'width: 160px;'}= paper.author
+              %td{:style => 'width: 160px; float:left;'}= paper.coauthor
               %td= paper.culture_circle_to_s
               %td= paper.created_at.try(:strftime, "%d/%m/%Y %H:%M")
               %td
