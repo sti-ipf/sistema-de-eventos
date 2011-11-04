@@ -48,6 +48,7 @@
             %th= t('paper.author')
             %th= t('paper.coauthor')
             %th= t('paper.culture_circle')
+            %th= t('paper.created_at')
             %th
             %th
             %th
@@ -60,6 +61,7 @@
               %td= paper.author
               %td= paper.coauthor
               %td= paper.culture_circle_to_s
+              %td= paper.created_at.try(:strftime, "%d/%m/%Y %H:%M")
               %td
                 %div{:id => "status_bt_#{paper.id}"}
                   = generate_status_button(paper)

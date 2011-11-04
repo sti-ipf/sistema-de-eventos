@@ -84,6 +84,7 @@ pt:
     employee_id: "Matrícula(s)"
     participation_type: "Forma de participação"
     participation: "Período de participação"
+    culture_circle: "Círculo de Cultura"
   paper:
     send_work: "Enviar trabalho"
     list: "Trabalhos cadastrados"
@@ -94,7 +95,7 @@ pt:
     status: "Status"
     invalid_content_type: "não permitido. Apenas .odt e .doc são permitidos."
     must_be_set: "obrigatório"
-    created_at: "Data da inscrição"
+    created_at: "Data de envio"
     institution: "Instituição"
     author: "Autor(a)"
     coauthor: "Co-autores(as)"
