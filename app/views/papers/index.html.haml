@@ -9,7 +9,7 @@
           "oTableTools": {
              "sSwfPath": "DataTables-1.8.1/media/swf/copy_cvs_xls_pdf.swf"
           },
-          "aoColumnDefs": [ { "bSortable": false, "aTargets": [ 5, 6, 7] }],
+          "aoColumnDefs": [ { "bSortable": false, "aTargets": [ 5, 6] }],
           'oLanguage': {
             'oPaginate': {
               'sFirst': 'primeira',
@@ -51,23 +51,25 @@
             %th= t('paper.created_at')
             %th
             %th
-            %th
-            %th
             
         %tbody
           - @papers.each do |paper|
             %tr
-              %td{:style => 'width: 160px;'}= paper.title
-              %td{:style => 'width: 160px;'}= paper.author
-              %td{:style => 'width: 160px; float:left;'}= paper.coauthor
+              %td{:style => 'width: 100px;'}= paper.title
+              %td{:style => 'width: 80px;'}= paper.author
+              %td{:style => 'width: 90px; float:left;'}= paper.coauthor
               %td= paper.culture_circle_to_s
               %td= paper.created_at.try(:strftime, "%d/%m/%Y %H:%M")
               %td
                 %div{:id => "status_bt_#{paper.id}"}
                   = generate_status_button(paper)
-              %td= link_to t('download'), "http://inscricao.paulofreire.org#{paper.artefact.url}"
-              %td= link_to t('edit'), edit_paper_path(:id => paper.id)
-              %td= link_to t('destroy'), paper_destroy_path(:id => paper.id)
+              %td 
+                =link_to t('download'), "http://inscricao.paulofreire.org#{paper.artefact.url}"
+                %br
+                =link_to t('edit'), edit_paper_path(:id => paper.id)
+                %br
+                =link_to t('destroy'), paper_destroy_path(:id => paper.id)
+              
         
       %br
     - else
