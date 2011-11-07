@@ -46,5 +46,13 @@ class Notification < ActionMailer::Base
     ActiveRecord::Base.connection.execute "UPDATE registrations set notificator_status = 11 WHERE id = #{@registration.id}"
   end  
 
+  def notification_to_all(registration_id)
+    @registration = Registration.find(registration_id)
+    puts "Enviando notificacao para o email: #{@registration.email}"
+    subject = "IMPORTANTE: Publicada a lista dos trabalhos selecionados para apresentação e caderno de resumos"
+    mail(:from => '90anos@paulofreire.org', :to => @registration.email, :bcc => 'ffc.fabricio@gmail.com', :subject => subject)
+    ActiveRecord::Base.connection.execute "UPDATE registrations set notificator_status = 12 WHERE id = #{@registration.id}"
+  end
+
 end
 

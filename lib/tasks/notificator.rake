@@ -23,5 +23,11 @@ namespace :notificator do
     end
   end
 
+  task :notification_to_all do
+    Registration.all.each do |r|
+      Notification.notification_to_all(r.id).deliver!
+    end
+  end
+
 end
 
