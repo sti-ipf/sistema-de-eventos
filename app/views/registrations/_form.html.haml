@@ -16,6 +16,9 @@
       jQuery('#registration_disability_desc_div').attr('style','visibility:visible; !important');
     }
   });
+%p
+  %b Inscrição exclusiva para participantes à distância
+%br
 #form
   = semantic_form_for @registration do |f|
     -if @registration.errors.any?
@@ -56,7 +59,7 @@
     .field
       = f.input :email, :as => :email
     .field
-      = f.input :participation_type, :as => :radio, :collection => [['Presencial', 0], ['A distância', 1]]
+      = f.input :participation_type, :as => :radio, :collection => [['A distância', 1]]
     - f.fields_for :participations do |builder|
       = render "participation_fields", :f => builder  
     %br
