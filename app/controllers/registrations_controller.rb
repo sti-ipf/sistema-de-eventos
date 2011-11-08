@@ -1,7 +1,7 @@
 class RegistrationsController < ApplicationController
   # GET /registrations
   # GET /registrations.xml
-  skip_before_filter :require_user, :only=>[:create, :checkout, :completed, :new, :edit_new_data, :update_new_data, :update]
+  skip_before_filter :require_user, :only=>[:checkout, :completed, :edit_new_data, :update_new_data, :update]
 
   layout :set_layout
   
