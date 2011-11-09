@@ -68,43 +68,25 @@ class Registration < ActiveRecord::Base
     c_address
   end
 
-  def self.to_csv_file(rede, registrations)
+  def self.to_csv_file(registrations)
     array = []
-
-    if rede
-      registrations.each do |r|
-        new_array = Array.new(11)
-        new_array[0] = r.name
-        new_array[1] = r.created_at.strftime("%d/%m/%Y") if !r.created_at.nil?
-        new_array[2] = r.unit
-        new_array[3] = r.cpf
-        new_array[4] = r.city
-        new_array[5] = r.state
-        new_array[6] = r.country
-        new_array[7] = r.phone
-        new_array[8] = r.mobile
-        new_array[9] = r.email
-        new_array[10] = r.activities.collect(&:name).join(',')
-        array << new_array
-      end
-    else
-     registrations.each do |r|
-        new_array = Array.new(12)
-        new_array[0] = r.name
-        new_array[1] = r.created_at.strftime("%d/%m/%Y") if !r.created_at.nil?
-        new_array[2] = r.cpf
-        new_array[3] = r.city
-        new_array[4] = r.state
-        new_array[5] = r.country
-        new_array[6] = r.phone
-        new_array[7] = r.mobile
-        new_array[8] = r.email
-        new_array[9] = r.activities.collect(&:name).join(',')
-        new_array[10] = r.mode_of_payment_to_s
-        new_array[11] = r.paid_to_s
-        array << new_array
-      end
+    registrations.each do |r|
+      new_array = Array.new(11)
+      new_array[0] = r.name
+      new_array[1] = r.created_at.strftime("%d/%m/%Y") if !r.created_at.nil?
+      new_array[2] = r.cpf
+      new_array[3] = r.city
+      new_array[4] = r.state
+      new_array[5] = r.country
+      new_array[6] = r.phone
+      new_array[7] = r.mobile
+      new_array[8] = r.email
+      new_array[9] = r.activities.first.try(:name)
+      new_array[10] = r.participation_type_to_s
+      new_array[11] = r.id
+      array << new_array
     end
+  
     array
   end
 
