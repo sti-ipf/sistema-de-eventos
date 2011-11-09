@@ -4,7 +4,76 @@
     %h1= t('registration.edit')
     %br
     #custom_form
-      = render 'form', :button => t('edit')
+      :javascript
+        function Formatadata(Campo, teclapres)
+        {
+                var tecla = teclapres.keyCode;
+                var vr = new String(Campo.value);
+                vr = vr.replace("-", "");
+                tam = vr.length + 1;
+                if (tecla != 8)
+                {
+                        if (tam == 6)
+                                Campo.value = vr.substr(0, 5) + '-' + vr.substr(5, 5);
+                }
+        }
+        $(document).ready(function() {
+          if ($("#registration_disabilities_1").is(':checked')){
+            jQuery('#registration_disability_desc_div').attr('style','visibility:visible; !important');
+          }
+        });
+      %p
+        %b Devido ao número limitados de vagas, a inscrição só poderá ser feita para participação a distância.
+      %br
+      #form
+        = semantic_form_for @registration do |f|
+          -if @registration.errors.any?
+            #error_explanation
+              %ul
+                - @registration.errors.full_messages.each do |msg|
+                  %li= msg
+          .field
+            = f.input :name
+          .field
+            = f.input :credential_name
+          .field
+            = f.input :rg, :mask => '99.999.999-*'
+          .field
+            = f.input :cpf, :hint => "somente números", :mask => :cpf
+          .field
+            = f.input :dob, :as => :date, :use_month_numbers => true, :order => [:day, :month, :year],  :start_year => (Date.today - 10.years).year, :end_year => 1900
+          .field
+            = f.input :zip_code, :hint => "somente números", :mask => :cep
+          .field
+            = f.input :address
+          .field
+            = f.input :address_number, :mask => '999999'
+          .field
+            = f.input :address_complement
+          .field
+            = f.input :district
+          .field
+            = f.input :city
+          .field
+            = f.input :state, :as => :select, :collection => Registration::STATES, :selected => "SP"
+          .field
+            = f.input :country, :as => :select, :collection => Registration::COUNTRIES, :selected => "Brasil"
+          .field
+            = f.input :phone, :mask => '99-9999-9999', :as => :string
+          .field
+            = f.input :mobile, :mask => '99-9999-9999'
+          .field
+            = f.input :email, :as => :email
+          .field
+            = f.input :participation_type, :as => :radio, :collection => [['Presencial', 0], ['A distância', 1]]
+          - f.fields_for :participations do |builder|
+            = render "participation_fields", :f => builder  
+          %br
+          = render 'disability_fields', :f => f
+
+          .actions
+            = f.submit t('edit')
+
   .clearfix
 
 .white-box-bot
