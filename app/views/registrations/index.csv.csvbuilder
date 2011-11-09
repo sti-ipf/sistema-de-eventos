@@ -1,5 +1,5 @@
 header = [
-"Nome Completo", "Data da inscrição", "Unidade Educacional", "CPF", "Cidade", "Estado", "País", "Fone Residencial", "Celular", "E-mail"
+"Nome Completo", "Data da inscrição", "CPF", "Cidade", "Estado", "País", "Fone Residencial", "Celular", "E-mail", "Círculo de Cultura", "Forma de participação", "Número da inscrição"
 ]
 
 csv << header
