@@ -1,7 +1,7 @@
 class RegistrationsController < ApplicationController
   # GET /registrations
   # GET /registrations.xml
-  skip_before_filter :require_user, :only=>[:new, :create, :checkout, :completed, :edit_new_data, :update_new_data, :update]
+  skip_before_filter :require_user, :only=>[:new, :create, :checkout, :completed, :edit_new_data, :update_new_data, :update, :search_certificate, :download_certificate]
 
   layout :set_layout
   
@@ -146,6 +146,13 @@ class RegistrationsController < ApplicationController
         format.xml  { render :xml => @registration.errors, :status => :unprocessable_entity }
       end
     end
+  end
+
+  def search_certificate
+  end
+
+  def download_certificate
+    @registration = Registration.with_cpf(params[:cpf])
   end
 
 protected

@@ -1,0 +1,24 @@
+.wrapper
+  .white-box
+    .white-box-top
+    .white-box-container
+      .content
+        %p
+          %b= notice
+        %br
+
+        - form_tag download_certificate_path, :method => :put, :id => 'search_certificate' do
+          = label_tag :cpf, 'Informe o seu CPF:', :style => 'width: 150px;'
+          = text_field_tag :cpf, nil, :class => "exempting_registration"
+          = submit_tag 'Buscar'
+        %br
+        .clearfix
+
+    .white-box-bot
+
+
+
+
+
+
+

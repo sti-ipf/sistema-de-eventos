@@ -32,6 +32,8 @@ Eieosasco::Application.routes.draw do
     match 'registrations/:id/edit_new_data' => 'registrations#edit_new_data', :as => 'edit_new_data'
     match 'registrations/:id/update_new_data' => 'registrations#update_new_data', :as => 'update_new_data'
     match 'sem_circulo' => 'home#without_activity', :as => 'without_activity'
+    match 'buscar_certificado' => 'registrations#search_certificate', :as => 'search_certificate'
+    match 'baixar_certificado' => 'registrations#download_certificate', :as => 'download_certificate'
   end
 
 

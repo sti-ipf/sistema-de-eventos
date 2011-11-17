@@ -3,6 +3,7 @@ class Registration < ActiveRecord::Base
   has_many :papers
   has_many :participations, :dependent => :destroy
   has_many :activities, :through => :participations
+  has_one :certificate
 
   validates_presence_of :name, :credential_name, :rg, :dob, :zip_code, :address, :address_number, :city, :district
   validates_presence_of :state, :country, :mobile
@@ -26,6 +27,22 @@ class Registration < ActiveRecord::Base
 
   accepts_nested_attributes_for :participations, :reject_if => lambda { |a| a[:activity_id].blank? }, :allow_destroy => true
 
+  
+  def self.masked_cpf(cpf)
+    "#{cpf.slice(0..2)}.#{cpf.slice(3..5)}.#{cpf.slice(6..8)}-#{cpf.slice(9..10)}"
+  end
+
+
+  def self.with_cpf(cpf)
+    registration = self.find_by_cpf(cpf)
+    if registration.nil?
+      registration = self.find_by_cpf(masked_cpf(cpf))
+    end
+    if registration.nil?
+      registration = self.find_by_cpf(cpf.gsub(/[.-]/, ''))
+    end
+    registration
+  end
   
   def activities_without_work_sended
     _activities = self.activities

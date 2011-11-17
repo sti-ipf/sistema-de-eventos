@@ -1,0 +1,26 @@
+.wrapper
+  .white-box
+    .white-box-top
+    .white-box-container
+      .content
+        - if @registration.nil?
+          O CPF informado não corresponde a um participante do evento.
+        - else
+          %p
+            %b Participante:
+            = @registration.name
+            %br
+            %b Certificado:
+            - if @registration.certificate.nil?
+              = "Certificado não gerado, favor entrar em contato com #{mail_to '90anos@paulofreire.org'}".html_safe
+            - else
+              = link_to 'Baixar certificado', @registration.certificate.file_path
+        .clearfix
+
+    .white-box-bot
+
+
+
+
+
+
