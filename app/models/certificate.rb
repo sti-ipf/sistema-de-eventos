@@ -14,7 +14,7 @@ class Certificate < ActiveRecord::Base
     end
   end
 
-  def self.generate_for_no_registration
+  def self.generate_for_no_registered
     registrations = Participant.all(:conditions => "name not IN (select name from registrations)")
     registrations.each do |r|
       r_name = Registration.find_by_sql("select * from participants where name like '#{r.name}'").first.name

@@ -1,3 +1,3 @@
-class Participation < ActiveRecord::Base
+class Participant < ActiveRecord::Base
   
 end
