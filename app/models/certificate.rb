@@ -5,7 +5,8 @@ class Certificate < ActiveRecord::Base
   def self.generate_all
     registrations = Registration.all(:conditions => "name IN (select name from participants)")
     registrations.each do |r|
-      file = fill_with_data(create_file('90anos'), r)
+      r_name = Registration.find_by_sql("select name from participants where name like '#{r.name}'").first.name
+      file = fill_with_data(create_file('90anos'), r_name)
       name = r.name.gsub(/[^a-zA-Z0-9 ]/,"").downcase
       file_path = "certificates/#{r.id}_#{name}.pdf"
       file.render_file("#{RAILS_ROOT}/public/#{file_path}")
@@ -15,8 +16,8 @@ class Certificate < ActiveRecord::Base
 
 private
 
-  def self.fill_with_data(file, registration)
-    file.draw_text registration.name, :at => [825,1280], :size => 60
+  def self.fill_with_data(file, name)
+    file.draw_text name, :at => [825,1280], :size => 60
     file
   end
 
