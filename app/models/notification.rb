@@ -70,10 +70,10 @@ class Notification < ActionMailer::Base
     name = @registration.name.gsub(/[^a-zA-Z0-9 ]/,"").downcase
     id = @registration.id + 1000
 
-    
+
     file_name = "certificates/#{id}_#{name}.pdf"
     attachments['certificado.pdf'] = File.read("#{RAILS_ROOT}/public/#{file_name}")
-    mail(:from => '90anos@paulofreire.org', :to => 'ffc.fabricio@gmail.com', :bcc => 'ffc.fabricio@gmail.com', :subject => subject)
+    mail(:from => '90anos@paulofreire.org', :to => @registration.email, :bcc => 'ffc.fabricio@gmail.com, 90anos@paulofreire.org', :subject => subject)
     #ActiveRecord::Base.connection.execute "UPDATE registrations set notificator_status = 20 WHERE id = #{@registration.id}"
   end
 end
