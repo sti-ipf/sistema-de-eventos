@@ -11,6 +11,7 @@ class Certificate < ActiveRecord::Base
       file_path = "certificates/#{r.id}_#{name}.pdf"
       file.render_file("#{RAILS_ROOT}/public/#{file_path}")
       Certificate.create(:registration_id => r.id, :file_path => file_path)
+      break
     end
   end
 
