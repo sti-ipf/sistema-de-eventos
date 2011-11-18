@@ -68,7 +68,9 @@ class Notification < ActionMailer::Base
     subject = "Certificado de participação Encontro Paulo Freire 90 anos"
 
     name = @registration.name.gsub(/[^a-zA-Z0-9 ]/,"").downcase
+    id = @registration.id + 1000
 
+    
     file_name = "certificates/#{id}_#{name}.pdf"
     attachments['certificado.pdf'] = File.read("#{RAILS_ROOT}/public/#{file_name}")
     mail(:from => '90anos@paulofreire.org', :to => 'ffc.fabricio@gmail.com', :bcc => 'ffc.fabricio@gmail.com', :subject => subject)
