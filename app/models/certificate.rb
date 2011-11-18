@@ -24,8 +24,8 @@ private
     pdf = Prawn::Document.new(:template => "#{RAILS_ROOT}/lib/certificate/#{template_name}.pdf")
     pdf.font_families.update(
          "Cambria" => {
-             :normal => "/Library/Fonts/Microsoft/Cambria.ttf",
-            :bold => "/Library/Fonts/Microsoft/Cambria Bold.ttf"})
+             :normal => "#{RAILS_ROOT}/public/fonts/Cambria.ttf",
+            :bold => "#{RAILS_ROOT}/public/fonts/CambriaBold.ttf"})
   
     pdf.font "Cambria"
     pdf
