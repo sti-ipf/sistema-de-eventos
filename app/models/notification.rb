@@ -63,12 +63,12 @@ class Notification < ActionMailer::Base
   end
 
   def send_certificate(registration_id)
-    @registration = Registration.find(registration_id)
+    @registration = Participant.find(registration_id)
     puts "Enviando notificacao para o email: #{@registration.email}"
     subject = "Certificado de participação Encontro Paulo Freire 90 anos"
     attachments['certificado.pdf'] = File.read("#{RAILS_ROOT}/public/#{@registration.certificate.file_path}")
     mail(:from => '90anos@paulofreire.org', :to => @registration.email, :bcc => 'ffc.fabricio@gmail.com, 90anos@paulofreire.org', :subject => subject)
-    ActiveRecord::Base.connection.execute "UPDATE registrations set notificator_status = 20 WHERE id = #{@registration.id}"
+    #ActiveRecord::Base.connection.execute "UPDATE registrations set notificator_status = 20 WHERE id = #{@registration.id}"
   end
 end
 

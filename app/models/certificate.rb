@@ -15,13 +15,16 @@ class Certificate < ActiveRecord::Base
   end
 
   def self.generate_for_no_registration
-    r = Registration.find(201)
-    r_name = Registration.find_by_sql("select * from participants where name like '#{r.name}'").first.name
-    file = fill_with_data(create_file('90anos'), r_name)
-    name = r.name.gsub(/[^a-zA-Z0-9 ]/,"").downcase
-    file_path = "certificates/#{r.id}_#{name}.pdf"
-    file.render_file("#{RAILS_ROOT}/public/#{file_path}")
-    Certificate.create(:registration_id => r.id, :file_path => file_path)
+    registrations = Participant.all(:conditions => "name not IN (select name from registrations)")
+    registrations.each do |r|
+      r_name = Registration.find_by_sql("select * from participants where name like '#{r.name}'").first.name
+      file = fill_with_data(create_file('90anos'), r_name)
+      name = r.name.gsub(/[^a-zA-Z0-9 ]/,"").downcase
+      id = r.id + 1000
+      file_path = "certificates/#{id}_#{name}.pdf"
+      file.render_file("#{RAILS_ROOT}/public/#{file_path}")
+      Certificate.create(:registration_id => r.id, :file_path => file_path)
+    end
   end
 
 private
