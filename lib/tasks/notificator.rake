@@ -36,10 +36,9 @@ namespace :notificator do
   end
 
   task :send_certificate do    
-    Notification.send_certificate(201).deliver! if !r.certificate.nil?
-    # Registration.all(:conditions => "name IN (select name from participants) and notificator_status != 20").each do |r|
-    #   Notification.send_certificate(r.id).deliver! if !r.certificate.nil?
-    # end
+    Participant.all(:conditions => "name not IN (select name from registrations)").each do |r|
+      Notification.send_certificate(r.id).deliver! #if !r.certificate.nil?
+    end
   end
 end
 
