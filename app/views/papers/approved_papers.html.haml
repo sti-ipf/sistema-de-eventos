@@ -1,0 +1,66 @@
+:javascript
+  $(document).ready(function(){
+    var oTable = $('.list').dataTable({
+          "iDisplayLength": -1,
+          "bAutoWidth": false,
+          "bJQueryUI": true,
+          "bPaginate": false,
+          "bSort": true,
+          "bLengthChange": false,
+          "bFilter": false,
+          "sDom": '<"H"lTfr>t<"F"ip>',
+          "aoColumnDefs": [ { "bSortable": false, "aTargets": [4] }],
+          "oTableTools": {
+             "sSwfPath": "DataTables-1.8.1/media/swf/copy_cvs_xls_pdf.swf"
+          },
+          'oLanguage': {
+            'oPaginate': {
+              'sFirst': 'primeira',
+              'sLast': 'ultima',
+              'sNext': 'próxima',
+              'sPrevious': 'anterior'
+            },
+            'sInfo': 'exibindo de _START_ até _END_ do total de _TOTAL_ registros',
+            'sEmptyTable': 'não há registros para exibir',
+            'sInfoFiltered': '- filtrando de _MAX_ registros',
+            'sInfoPostFix': '',
+            'sLengthMenu': 'exibe _MENU_ registros',
+            'sProcessing': 'processando',
+            'sSearch': 'filtrar',
+            'sZeroRecords': 'não há registros para exibir'
+          }
+        });
+  });
+
+#paper_approved
+  .content
+    %br
+    %h1{:style=> "color:#9A1E21" }= "Trabalhos apresentados"
+    %br
+    - if @papers.count > 0
+      %table{:id => 'papers', :class => 'list', :style => "width: 500px"}
+        %thead
+          %tr
+            %th= t('paper.title')
+            %th= t('paper.author')
+            %th= t('paper.coauthor')
+            %th= t('paper.culture_circle')
+            %th
+
+            
+        %tbody
+          - @papers.each do |paper|
+            %tr
+              %td= paper.title
+              %td= paper.author
+              %td= paper.coauthor
+              %td= paper.culture_circle_to_s
+              %td 
+                =link_to t('download'), "http://inscricao.paulofreire.org#{paper.artefact.url}"
+                
+              
+        
+      %br
+    - else
+      Não há trabalhos enviados ainda.
+

@@ -34,6 +34,7 @@ Eieosasco::Application.routes.draw do
     match 'sem_circulo' => 'home#without_activity', :as => 'without_activity'
     match 'buscar_certificado' => 'registrations#search_certificate', :as => 'search_certificate'
     match 'baixar_certificado' => 'registrations#download_certificate', :as => 'download_certificate'
+    match 'visualizar_trabalhos' => 'papers#approved_papers', :as => 'approved_papers'
   end
 
 

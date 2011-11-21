@@ -1,6 +1,6 @@
 class PapersController < ApplicationController
 
-  skip_before_filter :require_user, :only=>[:new, :create, :validate_paper_user]
+  skip_before_filter :require_user, :only=>[:new, :create, :validate_paper_user, :approved_papers]
 
   layout :set_layout
 
@@ -101,6 +101,10 @@ class PapersController < ApplicationController
     respond_to do |format|
       format.js
     end
+  end
+
+  def approved_papers
+    @papers = Paper.all(:include => [:registration], :conditions => "status = 1")
   end
 
 protected

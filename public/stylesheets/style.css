@@ -9,3 +9,7 @@
 #registration_participation_type_1, #registration_participation_type_0{
   margin-left: 25px;
 }
+
+#paper_approved .dataTables_wrapper{
+  width: 672px;
+}
