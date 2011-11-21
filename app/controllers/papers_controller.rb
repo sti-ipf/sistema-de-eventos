@@ -95,9 +95,8 @@ class PapersController < ApplicationController
   end
 
   def update_status
+    ActiveRecord::Base.connection.execute "UPDATE papers set status = #{params[:status]} WHERE id = #{params[:id]}"
     @paper = Paper.find(params[:id])
-    @paper.status = params[:status]
-    @paper.save
     respond_to do |format|
       format.js
     end
