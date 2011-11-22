@@ -34,11 +34,8 @@
 
 #paper_approved
   .content
-    %br
-    %h1{:style=> "color:#9A1E21" }= "Trabalhos apresentados"
-    %br
     - if @papers.count > 0
-      %table{:id => 'papers', :class => 'list', :style => "width: 500px"}
+      %table{:id => 'papers', :class => 'list', :style => "width: 450px"}
         %thead
           %tr
             %th= t('paper.title')
