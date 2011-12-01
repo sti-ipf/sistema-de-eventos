@@ -15,15 +15,16 @@ class Certificate < ActiveRecord::Base
   end
 
   def self.generate_for_no_registered
-    registrations = Registration.all(:conditions => "name IN (select name from participants)")
-    registrations.each do |r|
+    #registrations = Registration.all(:conditions => "name IN (select name from participants)")
+    Certificate.all.each do |c|
+      r = c.registration
       r_name = r.name
       file = fill_with_data(create_file('90anos_adistancia'), r_name)
       name = r.name.gsub(/[^a-zA-Z0-9 ]/,"").downcase
       id = r.id + 1000
       file_path = "certificates/#{id}_#{name}.pdf"
       file.render_file("#{RAILS_ROOT}/public/#{file_path}")
-      Certificate.create(:file_path => file_path)
+      #Certificate.create(:file_path => file_path)
     end
   end
 
