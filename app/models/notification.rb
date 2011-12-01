@@ -63,7 +63,7 @@ class Notification < ActionMailer::Base
   end
 
   def send_certificate(registration_id)
-    @registration = Participant.find(registration_id)
+    @registration = Registration.find(registration_id)
     puts "Enviando notificacao para o email: #{@registration.email}"
     subject = "Certificado de participação Encontro Paulo Freire 90 anos"
 
