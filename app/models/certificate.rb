@@ -18,6 +18,7 @@ class Certificate < ActiveRecord::Base
     #registrations = Registration.all(:conditions => "name IN (select name from participants)")
     Certificate.all.each do |c|
       r = c.registration
+      next if r.nil?
       r_name = r.name
       file = fill_with_data(create_file('90anos_adistancia'), r_name)
       name = r.name.gsub(/[^a-zA-Z0-9 ]/,"").downcase
