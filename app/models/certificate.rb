@@ -17,6 +17,7 @@ class Certificate < ActiveRecord::Base
   def self.generate_for_no_registered
     registrations = Registration.all(:conditions => "name IN (select name from participants)")
     registrations.each do |r|
+      next if !r.certificate.nil?
       r_name = r.name
       file = fill_with_data(create_file('90anos_adistancia'), r_name)
       name = r.name.gsub(/[^a-zA-Z0-9 ]/,"").downcase
@@ -24,6 +25,8 @@ class Certificate < ActiveRecord::Base
       file_path = "certificates/#{id}_#{name}.pdf"
       file.render_file("#{RAILS_ROOT}/public/#{file_path}")
       Certificate.create(:file_path => file_path)
+      r.notificator_status = 99
+      r.save
     end
   end
 
