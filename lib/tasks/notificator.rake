@@ -36,8 +36,9 @@ namespace :notificator do
   end
 
   task :send_certificate do    
-    Participant.all(:conditions => "name not IN (select name from registrations) and id not in (404)").each do |r|
+    Registration.all(:conditions => "name IN (select name from participants)").each do |r|
       Notification.send_certificate(r.id).deliver! if r.email.include?('@')
+      break
     end
   end
 end
